@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2jytbtmxmo7s"]
 
-[ext_resource type="Script" path="res://ColorRect.cs" id="1_d1ss1"]
+[ext_resource type="Script" path="res://Resources/Scripts/ColorRect.cs" id="1_unlki"]
 
 [node name="UI" type="Control"]
 custom_minimum_size = Vector2(1366, 768)
@@ -33,7 +33,7 @@ offset_top = 38.0
 offset_right = 1366.0
 offset_bottom = 48.0
 mouse_default_cursor_shape = 9
-script = ExtResource("1_d1ss1")
+script = ExtResource("1_unlki")
 
 [node name="Middle" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(1366, 684)
@@ -94,7 +94,7 @@ layout_mode = 0
 offset_right = 1366.0
 offset_bottom = 10.0
 mouse_default_cursor_shape = 9
-script = ExtResource("1_d1ss1")
+script = ExtResource("1_unlki")
 
 [connection signal="mouse_entered" from="VBoxContainer/Top/Control/ColorRect" to="VBoxContainer/Top/Control/ColorRect" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/Top/Control/ColorRect" to="VBoxContainer/Top/Control/ColorRect" method="_on_mouse_exited"]

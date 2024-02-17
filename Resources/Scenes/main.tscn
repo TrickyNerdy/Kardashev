@@ -1,19 +1,19 @@
 [gd_scene load_steps=10 format=3 uid="uid://p3ehoi8bbjph"]
 
-[ext_resource type="Script" path="res://Resources/Scripts/main.cs" id="1_6e0cb"]
-[ext_resource type="Script" path="res://Resources/Scripts/Player.cs" id="2_17kt8"]
-[ext_resource type="Texture2D" uid="uid://dxac6pg45ljtw" path="res://Resources/Art/BG/BG.png" id="2_fl458"]
-[ext_resource type="Script" path="res://Sol.cs" id="3_ef15h"]
-[ext_resource type="Script" path="res://Earth.cs" id="4_p2pdi"]
-[ext_resource type="Texture2D" uid="uid://b5fyippt1w8sx" path="res://Resources/Art/Ship/Venture.png" id="4_s0m34"]
-[ext_resource type="Script" path="res://UI.cs" id="7_1mymf"]
-[ext_resource type="Script" path="res://Resources/Scripts/Camera2D.cs" id="7_q2cap"]
+[ext_resource type="Script" path="res://Resources/Scripts/Main/Main.cs" id="1_nw7o2"]
+[ext_resource type="Texture2D" uid="uid://dxac6pg45ljtw" path="res://Resources/Art/BG/BG.png" id="2_besko"]
+[ext_resource type="Script" path="res://Resources/Scripts/Sol.cs" id="3_ttivr"]
+[ext_resource type="Script" path="res://Resources/Scripts/Earth.cs" id="4_xypjo"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI.cs" id="5_bcpwt"]
+[ext_resource type="Script" path="res://Resources/Scripts/Player.cs" id="6_6y5wi"]
+[ext_resource type="Texture2D" uid="uid://b5fyippt1w8sx" path="res://Resources/Art/Ship/Venture.png" id="7_1d7wf"]
+[ext_resource type="Script" path="res://Resources/Scripts/Main/Camera2D.cs" id="8_86e5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4w8s"]
 size = Vector2(1, 1)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_6e0cb")
+script = ExtResource("1_nw7o2")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -22,13 +22,13 @@ motion_scale = Vector2(0.6, 0.6)
 motion_mirroring = Vector2(512, 512)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("2_fl458")
+texture = ExtResource("2_besko")
 centered = false
 
 [node name="Sol" type="Node2D" parent="."]
 position = Vector2(-392, -424)
 scale = Vector2(20, 20)
-script = ExtResource("3_ef15h")
+script = ExtResource("3_ttivr")
 
 [node name="Asteroids" type="Node2D" parent="Sol"]
 
@@ -41,22 +41,22 @@ scale = Vector2(6, 6)
 
 [node name="Earth" type="Node2D" parent="Planets"]
 position = Vector2(333.333, -20)
-script = ExtResource("4_p2pdi")
+script = ExtResource("4_xypjo")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("7_1mymf")
+script = ExtResource("5_bcpwt")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
-script = ExtResource("2_17kt8")
+script = ExtResource("6_6y5wi")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 rotation = 1.5708
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_s0m34")
+texture = ExtResource("7_1d7wf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_n4w8s")
@@ -65,4 +65,4 @@ shape = SubResource("RectangleShape2D_n4w8s")
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 100.0
-script = ExtResource("7_q2cap")
+script = ExtResource("8_86e5k")
