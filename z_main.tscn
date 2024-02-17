@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://b26gyjsbhvmvf"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/main.cs" id="1_ydj6v"]
+[ext_resource type="Texture2D" uid="uid://dxac6pg45ljtw" path="res://Resources/Art/BG/BG.png" id="2_a38yy"]
+[ext_resource type="Script" path="res://Resources/Scripts/Player.cs" id="11_wi41x"]
+[ext_resource type="Texture2D" uid="uid://b5fyippt1w8sx" path="res://Resources/Art/Ship/Venture.png" id="12_1us1a"]
+[ext_resource type="Script" path="res://Resources/Scripts/Camera2D.cs" id="13_vv8tj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4w8s"]
+size = Vector2(1, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ydj6v")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(512, 512)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_a38yy")
+centered = false
+
+[node name="Sol" type="Node2D" parent="."]
+position = Vector2(-392, -424)
+scale = Vector2(20, 20)
+
+[node name="Asteroids" type="Node2D" parent="Sol"]
+
+[node name="Ships" type="Node2D" parent="Sol"]
+
+[node name="Planets" type="Node2D" parent="."]
+scale = Vector2(6, 6)
+
+[node name="Stations" type="Node2D" parent="Planets"]
+
+[node name="Earth" type="Node2D" parent="Planets"]
+position = Vector2(333.333, -20)
+
+[node name="Player" type="RigidBody2D" parent="."]
+position = Vector2(728, 0)
+gravity_scale = 0.0
+script = ExtResource("11_wi41x")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_1us1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_n4w8s")
+
+[node name="UI" type="Control" parent="Player"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 0)
+script = ExtResource("13_vv8tj")

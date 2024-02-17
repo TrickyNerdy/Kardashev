@@ -1,0 +1,17 @@
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\Debug\Main Kardashev.deps.json
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\Debug\Main Kardashev.runtimeconfig.json
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\Debug\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\Debug\Main Kardashev.pdb
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.csproj.AssemblyReference.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.AssemblyInfoInputs.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.AssemblyInfo.cs
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.csproj.CoreCompileInputs.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.csproj.CopyComplete
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\refint\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.pdb
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.genruntimeconfig.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\ref\Main Kardashev.dll
