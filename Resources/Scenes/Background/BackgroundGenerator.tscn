@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://3e5pb8dnkalv"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/Main/BackgroundGenerator.gd" id="1_272hw"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarStuff.gdshader" id="2_f3a3r"]
+[ext_resource type="Texture2D" uid="uid://bk8anh74yng5j" path="res://Resources/Resource/Colorscheme.tres" id="3_imfji"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_saqnq"]
+shader = ExtResource("2_f3a3r")
+shader_parameter/size = 40.0
+shader_parameter/OCTAVES = 8
+shader_parameter/seed = 1.2
+shader_parameter/pixels = 1000.0
+shader_parameter/should_tile = true
+shader_parameter/reduce_background = false
+shader_parameter/uv_correct = Vector2(1, 1)
+shader_parameter/colorscheme = ExtResource("3_imfji")
+
+[node name="BackgroundGenerator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2560.0
+offset_bottom = 2560.0
+script = ExtResource("1_272hw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="StarStuff" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_saqnq")
+layout_mode = 0
+offset_right = 2560.0
+offset_bottom = 2560.0

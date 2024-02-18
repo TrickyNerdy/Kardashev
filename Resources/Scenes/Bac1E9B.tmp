@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn0xrke4ji87l"]
+
+[ext_resource type="Script" path="res://Resources/Scenes/BackgroundGenerator.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bxbben1lpdn8t" path="res://Resources/Scenes/Colorscheme.tres" id="2"]
+[ext_resource type="Shader" path="res://Resources/Scenes/StarStuff.gdshader" id="2_8nf2j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k5brn"]
+shader = ExtResource("2_8nf2j")
+shader_parameter/size = 40.0
+shader_parameter/OCTAVES = 8
+shader_parameter/seed = 4.362
+shader_parameter/pixels = 1000.0
+shader_parameter/should_tile = true
+shader_parameter/reduce_background = false
+shader_parameter/uv_correct = Vector2(1, 1)
+shader_parameter/colorscheme = ExtResource("2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ag0xb"]
+
+[node name="BackgroundGenerator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+colorscheme = ExtResource("2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="StarStuff" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_k5brn")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nebulae" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ag0xb")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StarContainer" type="Node2D" parent="."]
+
+[node name="PlanetContainer" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

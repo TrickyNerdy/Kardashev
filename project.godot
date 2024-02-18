@@ -15,12 +15,13 @@ run/main_scene="res://Resources/Scenes/main.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 run/max_fps=144
 boot_splash/show_image=false
-config/icon="res://zOLD/icon.svg"
+config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/borderless=true
 mouse_cursor/custom_image="res://Resources/Art/Other/Crosshair.png"
 
 [dotnet]
@@ -43,6 +44,10 @@ common/max_physics_steps_per_frame=16
 common/physics_jitter_fix=1.0
 2d/solver/solver_iterations=32
 
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.12549, 0.133333, 0.0823529, 1)
+
 [shader_globals]
 
 TIME={
@@ -52,4 +57,12 @@ TIME={
 time={
 "type": "int",
 "value": 0
+}
+CUSTOM={
+"type": "vec2",
+"value": Vector2(1, 1)
+}
+NUMBER={
+"type": "uint",
+"value": 1
 }

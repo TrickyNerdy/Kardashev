@@ -15,3 +15,4 @@ C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\re
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.pdb
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.genruntimeconfig.cache
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\ref\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.sourcelink.json

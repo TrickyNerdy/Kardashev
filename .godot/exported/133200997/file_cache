@@ -1,5 +1,9 @@
-res://main.tscn::1666343c532f366d5be4387272e8da57::1707958842::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
-res://Resources/Art/Sol/sol.tres::c8df3c33f7406b66d46118e0b8facb34::1707934367::res://.godot/exported/133200997/export-cc775027ca425ad695f2f985b056f987-sol.res
-res://Planet.tscn::be868532c8f7ac66c3ec570dceb80e13::1707958842::res://.godot/exported/133200997/export-5b46f3a536ce2220e15d24aa0a9c97c6-Planet.scn
-res://Star.tscn::f94a8b20005ad1e6a8f444a974455cc7::1707958843::res://.godot/exported/133200997/export-a4b15168e996e71347b9ef4f6f561fa1-Star.scn
-res://z_main.tscn::9ba9d21b6a636aa7c2617679fbc1388b::1707956564::res://.godot/exported/133200997/export-9cc514bc8160efdbc538c6834a08da72-z_main.scn
+res://Resources/Scenes/main.tscn::376d61a4029df030e29d1a99bed88fc1::1708285783::res://.godot/exported/133200997/export-3711c77c995e4201e3f390d5299d713d-main.scn
+res://Resources/Scenes/mainmenu.tscn::21db05bda6ac2f312191d5186591aca6::1708277379::res://.godot/exported/133200997/export-60000f2f5f1777d49b3995514ec0ad8b-mainmenu.scn
+res://Resources/Scenes/Planet.tscn::6de49156babd2c145155dd78ab1f577e::1708285783::res://.godot/exported/133200997/export-13abc401c38601fb183f1b56bd5c35ff-Planet.scn
+res://Resources/Scenes/Star.tscn::dc8026290e0fc558178eb42ced657c33::1708285783::res://.godot/exported/133200997/export-bc1cfa40ec34cccd389486ce9de64294-Star.scn
+res://Resources/Scenes/UI.tscn::f19009d736562163799916a36298f936::1708277380::res://.godot/exported/133200997/export-a90cb61d85258f03c7a0b06b5960cc17-UI.scn
+res://Resources/Scenes/BackgroundGenerator.tscn::e7bf41e6e63c973fccd8e78285034a80::1708285783::res://.godot/exported/133200997/export-d1f308d51d02c84285fade2b3bab74ad-BackgroundGenerator.scn
+res://Resources/Scenes/BigStar.tscn::9962b0b1f08437402c57f1bfd8c0291d::1708280284::res://.godot/exported/133200997/export-29d66a6bb9ea27fc5a173700e5ec32d2-BigStar.scn
+res://Resources/Scenes/Colorscheme.tres::324321dc12a5066b5ea838c5341f291b::1708285783::res://.godot/exported/133200997/export-edb69a18c5070b1281c0959931cb8c3e-Colorscheme.res
+res://Resources/Scenes/Planet2.tscn::68dd74154c83e98c7b78a9e07c5edd3b::1708285784::res://.godot/exported/133200997/export-1ba8fca5956a7c1924729bee51bd3857-Planet2.scn

@@ -1,7 +1,6 @@
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\Main Kardashev.deps.json
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\Main Kardashev.runtimeconfig.json
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\Main Kardashev.dll
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\Main Kardashev.pdb
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\GodotSharp.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\Microsoft.CSharp.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\Microsoft.VisualBasic.Core.dll
@@ -233,6 +232,5 @@ C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDe
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\Main Kardashev.csproj.CopyComplete
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\Main Kardashev.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\refint\Main Kardashev.dll
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\Main Kardashev.pdb
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\Main Kardashev.genruntimeconfig.cache
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\ref\Main Kardashev.dll

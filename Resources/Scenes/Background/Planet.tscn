@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqcnfkgnvyh35"]
+
+[ext_resource type="Script" path="res://Resources/Scenes/Background/Planet.gd" id="1_b52lf"]
+
+[node name="Planet" type="Sprite2D"]
+script = ExtResource("1_b52lf")

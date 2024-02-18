@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://gt23h1afntjt"]
+
+[ext_resource type="Script" path="res://Resources/Scenes/Background/BigStar.gd" id="1_trfle"]
+
+[node name="BigStar" type="Sprite2D"]
+script = ExtResource("1_trfle")

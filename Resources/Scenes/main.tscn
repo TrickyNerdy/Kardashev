@@ -1,13 +1,31 @@
 [gd_scene load_steps=10 format=3 uid="uid://p3ehoi8bbjph"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Main/Main.cs" id="1_nw7o2"]
-[ext_resource type="Texture2D" uid="uid://dxac6pg45ljtw" path="res://Resources/Art/BG/BG.png" id="2_besko"]
-[ext_resource type="Script" path="res://Resources/Scripts/Sol.cs" id="3_ttivr"]
-[ext_resource type="Script" path="res://Resources/Scripts/Earth.cs" id="4_xypjo"]
-[ext_resource type="Script" path="res://Resources/Scripts/UI.cs" id="5_bcpwt"]
-[ext_resource type="Script" path="res://Resources/Scripts/Player.cs" id="6_6y5wi"]
-[ext_resource type="Texture2D" uid="uid://b5fyippt1w8sx" path="res://Resources/Art/Ship/Venture.png" id="7_1d7wf"]
-[ext_resource type="Script" path="res://Resources/Scripts/Main/Camera2D.cs" id="8_86e5k"]
+[ext_resource type="Script" path="res://Resources/Scripts/Main/BG/BG.cs" id="2_5acmf"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Stars/Sol.cs" id="3_ttivr"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Planets/Earth.cs" id="4_xypjo"]
+[ext_resource type="Script" path="res://Resources/Scripts/Player/Ship/Player.cs" id="6_6y5wi"]
+[ext_resource type="Texture2D" uid="uid://b5fyippt1w8sx" path="res://Resources/Art/Ships/Venture.png" id="7_1d7wf"]
+[ext_resource type="Script" path="res://Resources/Scripts/Main/Camera/Camera2D.cs" id="8_86e5k"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_62h6r"]
+script/source = "using Godot;
+using System;
+
+public partial class UI : Control
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+		//var scene = GD.Load<PackedScene>(\"res://UI.tscn\"); var inst = scene.Instantiate(); AddChild(inst);
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4w8s"]
 size = Vector2(1, 1)
@@ -18,15 +36,11 @@ script = ExtResource("1_nw7o2")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.6, 0.6)
-motion_mirroring = Vector2(512, 512)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("2_besko")
-centered = false
+motion_scale = Vector2(1.15, 1.15)
+motion_mirroring = Vector2(2560, 2560)
+script = ExtResource("2_5acmf")
 
 [node name="Sol" type="Node2D" parent="."]
-position = Vector2(-392, -424)
 scale = Vector2(20, 20)
 script = ExtResource("3_ttivr")
 
@@ -46,7 +60,7 @@ script = ExtResource("4_xypjo")
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("5_bcpwt")
+script = SubResource("CSharpScript_62h6r")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" type="RigidBody2D" parent="."]
@@ -62,7 +76,11 @@ texture = ExtResource("7_1d7wf")
 shape = SubResource("RectangleShape2D_n4w8s")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-process_callback = 0
+limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 100.0
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
 script = ExtResource("8_86e5k")

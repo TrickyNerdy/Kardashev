@@ -1,0 +1,17 @@
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\Main Kardashev.deps.json
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\Main Kardashev.runtimeconfig.json
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\Main Kardashev.pdb
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\GodotSharp.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.csproj.AssemblyReference.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.AssemblyInfoInputs.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.AssemblyInfo.cs
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.csproj.CoreCompileInputs.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.sourcelink.json
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.csproj.CopyComplete
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\refint\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.pdb
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\Main Kardashev.genruntimeconfig.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\ref\Main Kardashev.dll

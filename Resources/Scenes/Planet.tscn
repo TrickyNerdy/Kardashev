@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvmtu31qj14gq"]
 
-[ext_resource type="Script" path="res://Resources/Scripts/Planet.gd" id="1_idbc2"]
-[ext_resource type="Shader" path="res://Resources/Shaders/LandRivers.gdshader" id="2_4x2s8"]
-[ext_resource type="Shader" path="res://Resources/Shaders/Clouds.gdshader" id="3_qosph"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Planets/Planet.gd" id="1_17fum"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader" id="2_qa5cv"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/Clouds.gdshader" id="3_m7fa3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mm30q"]
-shader = ExtResource("2_4x2s8")
+shader = ExtResource("2_qa5cv")
 shader_parameter/pixels = 250.0
 shader_parameter/rotation = 0.0
 shader_parameter/light_origin = Vector2(0.305, 0.58)
@@ -27,7 +27,7 @@ shader_parameter/seed = 4.464
 shader_parameter/time = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gwx1c"]
-shader = ExtResource("3_qosph")
+shader = ExtResource("3_m7fa3")
 shader_parameter/pixels = 250.0
 shader_parameter/rotation = 0.0
 shader_parameter/cloud_cover = 0.363
@@ -53,7 +53,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_idbc2")
+script = ExtResource("1_17fum")
 
 [node name="Land" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_mm30q")
