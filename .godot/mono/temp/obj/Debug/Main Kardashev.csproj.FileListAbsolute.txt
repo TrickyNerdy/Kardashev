@@ -9,10 +9,10 @@ C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Ma
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.AssemblyInfoInputs.cache
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.AssemblyInfo.cs
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.csproj.CoreCompileInputs.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.sourcelink.json
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.csproj.CopyComplete
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\refint\Main Kardashev.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.pdb
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.genruntimeconfig.cache
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\ref\Main Kardashev.dll
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\Debug\Main Kardashev.sourcelink.json

@@ -1,5 +1,0 @@
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\publish\win-x64\Main Kardashev.dll
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\publish\win-x64\Main Kardashev.deps.json
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\publish\win-x64\Main Kardashev.runtimeconfig.json
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\publish\win-x64\Main Kardashev.pdb
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\publish\win-x64\GodotSharp.dll

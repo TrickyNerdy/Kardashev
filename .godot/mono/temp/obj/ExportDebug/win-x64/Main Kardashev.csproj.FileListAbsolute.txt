@@ -234,3 +234,6 @@ C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDe
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\refint\Main Kardashev.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\Main Kardashev.genruntimeconfig.cache
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\ref\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportDebug\win-x64\Main Kardashev.pdb
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\Main Kardashev.sourcelink.json
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportDebug\win-x64\Main Kardashev.pdb

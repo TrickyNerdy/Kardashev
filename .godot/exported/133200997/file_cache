@@ -1,9 +1,7 @@
-res://Resources/Scenes/main.tscn::376d61a4029df030e29d1a99bed88fc1::1708285783::res://.godot/exported/133200997/export-3711c77c995e4201e3f390d5299d713d-main.scn
-res://Resources/Scenes/mainmenu.tscn::21db05bda6ac2f312191d5186591aca6::1708277379::res://.godot/exported/133200997/export-60000f2f5f1777d49b3995514ec0ad8b-mainmenu.scn
-res://Resources/Scenes/Planet.tscn::6de49156babd2c145155dd78ab1f577e::1708285783::res://.godot/exported/133200997/export-13abc401c38601fb183f1b56bd5c35ff-Planet.scn
-res://Resources/Scenes/Star.tscn::dc8026290e0fc558178eb42ced657c33::1708285783::res://.godot/exported/133200997/export-bc1cfa40ec34cccd389486ce9de64294-Star.scn
-res://Resources/Scenes/UI.tscn::f19009d736562163799916a36298f936::1708277380::res://.godot/exported/133200997/export-a90cb61d85258f03c7a0b06b5960cc17-UI.scn
-res://Resources/Scenes/BackgroundGenerator.tscn::e7bf41e6e63c973fccd8e78285034a80::1708285783::res://.godot/exported/133200997/export-d1f308d51d02c84285fade2b3bab74ad-BackgroundGenerator.scn
-res://Resources/Scenes/BigStar.tscn::9962b0b1f08437402c57f1bfd8c0291d::1708280284::res://.godot/exported/133200997/export-29d66a6bb9ea27fc5a173700e5ec32d2-BigStar.scn
-res://Resources/Scenes/Colorscheme.tres::324321dc12a5066b5ea838c5341f291b::1708285783::res://.godot/exported/133200997/export-edb69a18c5070b1281c0959931cb8c3e-Colorscheme.res
-res://Resources/Scenes/Planet2.tscn::68dd74154c83e98c7b78a9e07c5edd3b::1708285784::res://.godot/exported/133200997/export-1ba8fca5956a7c1924729bee51bd3857-Planet2.scn
+res://Resources/Scenes/Planet.tscn::e01006b333050c1fed5b0d0a8b73b2b7::1708303234::res://.godot/exported/133200997/export-13abc401c38601fb183f1b56bd5c35ff-Planet.scn
+res://Resources/Scenes/Star.tscn::cb3a71d979797e8dc7307250415201e4::1708303234::res://.godot/exported/133200997/export-bc1cfa40ec34cccd389486ce9de64294-Star.scn
+res://Resources/Resource/Colorscheme.tres::612186cce3f6173490611a3022df7b70::1708301642::res://.godot/exported/133200997/export-a4ad90ad71eeaf10df5cdf7e9470fcef-Colorscheme.res
+res://Resources/Scenes/Background/BackgroundGenerator.tscn::44fbe1424010d8ca75f386fc7d015945::1708303234::res://.godot/exported/133200997/export-af62b47b3e52a72c0021108a2e105e3b-BackgroundGenerator.scn
+res://Resources/Scenes/Background/BigStar.tscn::b3758ea4b2942338cf0be6fbb13f482d::1708303234::res://.godot/exported/133200997/export-60ae228a4023929eb4bd2c95bedbe892-BigStar.scn
+res://Resources/Scenes/Background/Planet.tscn::4374c8da24412aef0b929b67aada5c42::1708303234::res://.godot/exported/133200997/export-688b94a38949d76a73af7175ba171d31-Planet.scn
+res://main.tscn::1724ae4b0045246bf804b11f17c4cb76::1708303234::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn

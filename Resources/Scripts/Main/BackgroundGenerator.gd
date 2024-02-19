@@ -2,10 +2,10 @@ extends Control
 
 @onready var background = $CanvasLayer/Background
 @onready var starstuff = $StarStuff
-@onready var nebulae = $Nebulae
-@onready var particles = $StarParticles
-@onready var starcontainer = $StarContainer
-@onready var planetcontainer = $PlanetContainer
+#@onready var nebulae = $Nebulae
+#@onready var particles = $StarParticles
+#@onready var starcontainer = $StarContainer
+#@onready var planetcontainer = $PlanetContainer
 @onready var planet_scene = preload("res://Resources/Scenes/Background/Planet.tscn")
 @onready var big_star_scene = preload("res://Resources/Scenes/Background/BigStar.tscn")
 
@@ -26,7 +26,7 @@ func set_mirror_size(new):
 func toggle_tile():
 	should_tile = !should_tile
 	starstuff.material.set_shader_parameter("should_tile", should_tile)
-	nebulae.material.set_shader_parameter("should_tile", should_tile)
+	#nebulae.material.set_shader_parameter("should_tile", should_tile)
 	
 	_make_new_planets()
 	_make_new_stars()
@@ -34,7 +34,7 @@ func toggle_tile():
 func toggle_reduce_background():
 	reduce_background = !reduce_background
 	starstuff.material.set_shader_parameter("reduce_background", reduce_background)
-	nebulae.material.set_shader_parameter("reduce_background", reduce_background)
+	#nebulae.material.set_shader_parameter("reduce_background", reduce_background)
 
 func generate_new():
 	starstuff.material.set_shader_parameter("seed", randf_range(1.0, 10.0))
@@ -47,17 +47,17 @@ func generate_new():
 		aspect = Vector2(1.0, size.y / size.x)
 	
 	starstuff.material.set_shader_parameter("uv_correct", aspect)
-	nebulae.material.set_shader_parameter("seed", randf_range(1.0, 10.0))
-	nebulae.material.set_shader_parameter("pixels", max(size.x, size.y))
-	nebulae.material.set_shader_parameter("uv_correct", aspect)
+	#nebulae.material.set_shader_parameter("seed", randf_range(1.0, 10.0))
+	#nebulae.material.set_shader_parameter("pixels", max(size.x, size.y))
+	#nebulae.material.set_shader_parameter("uv_correct", aspect)
 	
-	particles.speed_scale = 1.0
-	particles.amount = 1
-	particles.position = size * 0.5
-	particles.process_material.set_shader_parameter("emission_box_extents", Vector3(size.x * 0.5, size.y*0.5,1.0))
+	#particles.speed_scale = 1.0
+	#particles.amount = 1
+	#particles.position = size * 0.5
+	#particles.process_material.set_shader_parameter("emission_box_extents", Vector3(size.x * 0.5, size.y*0.5,1.0))
 	
-	var p_amount = (size.x * size.y) / 150
-	particles.amount = randi()%(int(p_amount * 0.75)) + int(p_amount * 0.25)
+	#var p_amount = (size.x * size.y) / 150
+	#particles.amount = randi()%(int(p_amount * 0.75)) + int(p_amount * 0.25)
 
 	$PauseParticles.start()
 	
@@ -79,26 +79,26 @@ func _make_new_planets():
 		p.queue_free()
 	planet_objects = []
 
-	var planet_amount = 5#int(size.x * size.y) / 8000
-	for i in randi()%planet_amount:
-		_place_planet()
+	#var planet_amount = 5#int(size.x * size.y) / 8000
+	#for i in randi()%planet_amount:
+	#	_place_planet()
 
-func _set_new_colors(new_scheme, new_background):
-	colorscheme = new_scheme
+#func _set_new_colors(new_scheme, new_background):
+	#colorscheme = new_scheme
 
 	starstuff.material.set_shader_parameter("colorscheme", colorscheme)
-	nebulae.material.set_shader_parameter("colorscheme", colorscheme)
-	nebulae.material.set_shader_parameter("background_color", new_background)
+	#nebulae.material.set_shader_parameter("colorscheme", colorscheme)
+	#nebulae.material.set_shader_parameter("background_color", new_background)
 	
-	particles.process_material.set_shader_parameter("colorscheme", colorscheme)
+	#particles.process_material.set_shader_parameter("colorscheme", colorscheme)
 	for p in planet_objects:
 		p.material.set_shader_parameter("colorscheme", colorscheme)
 	for s in star_objects:
 		s.material.set_shader_parameter("colorscheme", colorscheme)
 
-func _place_planet():
-	var min_size = min(size.x, size.y)
-	var scale = Vector2(1,1)*(randf_range(0.2, 0.7)*randf_range(0.5, 1.0)*min_size*0.005)
+#func _place_planet():
+	#var min_size = min(size.x, size.y)
+	#var scale = Vector2(1,1)*(randf_range(0.2, 0.7)*randf_range(0.5, 1.0)*min_size*0.005)
 	
 	var pos = Vector2()
 	if (should_tile):
@@ -110,7 +110,7 @@ func _place_planet():
 	var planet = planet_scene.instantiate()
 	planet.scale = scale
 	planet.position = pos
-	planetcontainer.add_child(planet)
+	#planetcontainer.add_child(planet)
 	planet_objects.append(planet)
 
 func _place_big_star():
@@ -123,28 +123,29 @@ func _place_big_star():
 	
 	var star = big_star_scene.instantiate()
 	star.position = pos
-	starcontainer.add_child(star)
-	star_objects.append(star)
+	#starcontainer.add_child(star)
+	#star_objects.append(star)
 
-func _on_PauseParticles_timeout():
-	particles.speed_scale = 0.0
+#func _on_PauseParticles_timeout():
+	#particles.speed_scale = 0.0
 
-func set_background_color(c):
-	background.color = c
-	nebulae.material.set_shader_parameter("background_color", c)
+#func set_background_color(c):
+	#background.color = c
+	#
+	#nebulae.material.set_shader_parameter("background_color", c)
 
-func toggle_dust():
-	starstuff.visible = !starstuff.visible
+#func toggle_dust():
+	#starstuff.visible = !starstuff.visible
 
-func toggle_stars():
-	starcontainer.visible = !starcontainer.visible
-	particles.visible = !particles.visible
+#func toggle_stars():
+	#starcontainer.visible = !starcontainer.visible
+	#particles.visible = !particles.visible
 
-func toggle_nebulae():
-	$Nebulae.visible = !$Nebulae.visible
+#func toggle_nebulae():
+	#$Nebulae.visible = !$Nebulae.visible
 
-func toggle_planets():
-	planetcontainer.visible = !planetcontainer.visible
+#func toggle_planets():
+	#planetcontainer.visible = !planetcontainer.visible
 
-func toggle_transparancy():
-	$CanvasLayer/Background.visible = !$CanvasLayer/Background.visible
+#func toggle_transparancy():
+	#$CanvasLayer/Background.visible = !$CanvasLayer/Background.visible

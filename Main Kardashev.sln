@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main Kardashev", "Main Kardashev.csproj", "{1CF9E109-0C16-4350-8276-577BEB12F5AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main Kardashev", "Main Kardashev.csproj", "{41CDF716-CA5E-4CFF-8309-22C3719DC711}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1CF9E109-0C16-4350-8276-577BEB12F5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CF9E109-0C16-4350-8276-577BEB12F5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CF9E109-0C16-4350-8276-577BEB12F5AB}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{1CF9E109-0C16-4350-8276-577BEB12F5AB}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{1CF9E109-0C16-4350-8276-577BEB12F5AB}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{1CF9E109-0C16-4350-8276-577BEB12F5AB}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{41CDF716-CA5E-4CFF-8309-22C3719DC711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41CDF716-CA5E-4CFF-8309-22C3719DC711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41CDF716-CA5E-4CFF-8309-22C3719DC711}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{41CDF716-CA5E-4CFF-8309-22C3719DC711}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{41CDF716-CA5E-4CFF-8309-22C3719DC711}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{41CDF716-CA5E-4CFF-8309-22C3719DC711}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

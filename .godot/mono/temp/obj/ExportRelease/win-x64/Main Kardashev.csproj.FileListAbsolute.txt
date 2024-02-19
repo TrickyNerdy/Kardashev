@@ -2,16 +2,6 @@ C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRe
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\Main Kardashev.runtimeconfig.json
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\Main Kardashev.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\GodotSharp.dll
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.csproj.AssemblyReference.cache
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.AssemblyInfoInputs.cache
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.AssemblyInfo.cs
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.csproj.CoreCompileInputs.cache
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.csproj.CopyComplete
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.dll
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\refint\Main Kardashev.dll
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.genruntimeconfig.cache
-C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\ref\Main Kardashev.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\Microsoft.CSharp.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\Microsoft.VisualBasic.Core.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\Microsoft.VisualBasic.dll
@@ -234,3 +224,16 @@ C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRe
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\mscorrc.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\msquic.dll
 C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\ucrtbase.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.csproj.AssemblyReference.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.AssemblyInfoInputs.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.AssemblyInfo.cs
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.csproj.CoreCompileInputs.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.csproj.CopyComplete
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\refint\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.genruntimeconfig.cache
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\ref\Main Kardashev.dll
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\bin\ExportRelease\win-x64\Main Kardashev.pdb
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.sourcelink.json
+C:\Users\Gwacie\OneDrive\Documents\Godot\Kardashev\.godot\mono\temp\obj\ExportRelease\win-x64\Main Kardashev.pdb
