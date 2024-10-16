@@ -1,66 +1,4497 @@
-[gd_scene load_steps=9 format=3 uid="uid://p3ehoi8bbjph"]
+[gd_scene load_steps=44 format=3 uid="uid://p3ehoi8bbjph"]
 
-[ext_resource type="Script" path="res://Main.cs" id="1_6odfi"]
-[ext_resource type="Script" path="res://Resources/Scripts/Main/BG/BG.cs" id="2_xxy3g"]
-[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Stars/Sol.cs" id="3_fijde"]
-[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Planets/Earth.cs" id="4_jr7s5"]
-[ext_resource type="Script" path="res://Resources/Scripts/Player/Ship/Player.cs" id="5_8oorp"]
-[ext_resource type="Texture2D" uid="uid://b5fyippt1w8sx" path="res://Resources/Art/Ships/Venture.png" id="6_pbdr0"]
-[ext_resource type="Script" path="res://Resources/Scripts/Main/Camera/Camera2D.cs" id="7_vietx"]
+[ext_resource type="Material" uid="uid://dt2x16dh7xb20" path="res://Resources/Stars/Sol/solStarBlobsMat.tres" id="2_4koep"]
+[ext_resource type="Material" uid="uid://df7bwthg8nu3p" path="res://Resources/Stars/Sol/solStarMat.tres" id="3_x1gbl"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/Star.gdshader" id="3_y06cq"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader" id="4_5vxdo"]
+[ext_resource type="Material" uid="uid://cb8ph3r3k6ara" path="res://Resources/Stars/Sol/solStarFlaresMat.tres" id="4_pmbe7"]
+[ext_resource type="Texture2D" uid="uid://bukxie1wyg2in" path="res://Resources/Resource/Sun Rise.tres" id="4_suobb"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader" id="5_pap3i"]
+[ext_resource type="Texture2D" uid="uid://ct0fkm4ak742i" path="res://Resources/Art/Other/station.png" id="7_3f4ur"]
+[ext_resource type="Texture2D" uid="uid://1va3qfmoc8c" path="res://Resources/Resource/Gerbier Light .tres" id="7_34ymu"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Stars/Star.gd" id="7_h1riu"]
+[ext_resource type="Texture2D" uid="uid://bx3ys1ha7lopx" path="res://Resources/Resource/Yellow Pastel to Red.tres" id="8_tgtp2"]
+[ext_resource type="Material" uid="uid://drtb61toducpa" path="res://Resources/Stars/Proxima centauri/proxima_centauriStarBlobsMat.tres" id="9_1embu"]
+[ext_resource type="Material" uid="uid://1l3vmtlv5a0w" path="res://Resources/Stars/Proxima centauri/proxima_centauriStarMat.tres" id="10_5ec65"]
+[ext_resource type="Texture2D" uid="uid://dwyte5uweand5" path="res://Resources/Resource/White Alrt.tres" id="10_f3nr0"]
+[ext_resource type="Texture2D" uid="uid://jokcxh3114vv" path="res://Resources/Art/Other/gate.png" id="11_7ppsl"]
+[ext_resource type="Material" uid="uid://bl7a35bj8qmlk" path="res://Resources/Stars/Proxima centauri/proxima_centauriStarFlaresMat.tres" id="11_3710n"]
+[ext_resource type="Texture2D" uid="uid://dpkintnm1xj6v" path="res://Resources/Resource/Blue Pastel.tres" id="16_r7kgp"]
+[ext_resource type="Script" path="res://Resources/Scripts/Player/Ship/Player.cs" id="18_rs7pf"]
+[ext_resource type="Texture2D" uid="uid://c4jd0wjvturaq" path="res://Resources/Art/Ships/AsgardSciCruser.png" id="19_jlgv4"]
+[ext_resource type="Script" path="res://Resources/Scripts/Main/Camera/Camera.cs" id="20_2ufx2"]
+[ext_resource type="Script" path="res://Resources/Scripts/shader/BackgroundGenerator.gd" id="20_8sb16"]
+[ext_resource type="Material" uid="uid://cpgdr1a5g5sqx" path="res://Resources/Scenes/shaders/SolBG.tres" id="21_gowp7"]
+[ext_resource type="Texture2D" uid="uid://5tbr7jsj56hf" path="res://Resources/Art/Starfield.png" id="21_taq5u"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_il63l"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mcpa3"]
+shader = ExtResource("4_5vxdo")
+shader_parameter/pixels = 250.0
+shader_parameter/color = Color(0.972549, 0.976471, 0.741176, 1)
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.0
+shader_parameter/rotation = 1.418
+shader_parameter/seed = 3.903
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0v8sk"]
+shader = ExtResource("3_y06cq")
+shader_parameter/pixels = 225.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.725
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = true
+shader_parameter/seed = 2.71
+shader_parameter/size = 1.0
+shader_parameter/OCTAVES = 1
+shader_parameter/TILES = 4.0
+shader_parameter/colorramp = ExtResource("4_suobb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tyf58"]
+shader = ExtResource("5_pap3i")
+shader_parameter/pixels = 250.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = true
+shader_parameter/storm_width = 0.3
+shader_parameter/storm_dither_width = 0.07
+shader_parameter/scale = 1.0
+shader_parameter/seed = 2.165
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 1.0
+shader_parameter/OCTAVES = 1
+shader_parameter/colorramp = ExtResource("4_suobb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fjn6f"]
+shader = ExtResource("4_5vxdo")
+shader_parameter/pixels = 1000.0
+shader_parameter/color = Color(0.886275, 0.545098, 0.545098, 1)
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.0
+shader_parameter/rotation = 0.0
+shader_parameter/seed = 10.0
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e6hxo"]
+shader = ExtResource("3_y06cq")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = 2.57
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 8
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = ExtResource("7_34ymu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nqi1u"]
+shader = ExtResource("5_pap3i")
+shader_parameter/pixels = 250.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = true
+shader_parameter/storm_width = 0.3
+shader_parameter/storm_dither_width = 0.07
+shader_parameter/scale = 1.0
+shader_parameter/seed = 3.59
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 2.0
+shader_parameter/OCTAVES = 1
+shader_parameter/colorramp = ExtResource("7_34ymu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m4n15"]
+shader = ExtResource("4_5vxdo")
+shader_parameter/pixels = 1000.0
+shader_parameter/color = Color(0.976471, 0.776471, 0.741176, 1)
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.0
+shader_parameter/rotation = 0.0
+shader_parameter/seed = 2.607
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tvnxv"]
+shader = ExtResource("3_y06cq")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = 4.094
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 8
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = ExtResource("8_tgtp2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qn5xi"]
+shader = ExtResource("5_pap3i")
+shader_parameter/pixels = 250.0
+shader_parameter/time_speed = 0.2
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/storm_width = 0.5
+shader_parameter/storm_dither_width = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/seed = 3.25
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 1.0
+shader_parameter/OCTAVES = 1
+shader_parameter/colorramp = ExtResource("8_tgtp2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_753wq"]
+shader = ExtResource("4_5vxdo")
+shader_parameter/pixels = 1000.0
+shader_parameter/color = Color(1, 0.694118, 0.313726, 1)
+shader_parameter/time_speed = 0.2
+shader_parameter/time = 0.0
+shader_parameter/rotation = 0.0
+shader_parameter/seed = 2.0
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eos5b"]
+shader = ExtResource("3_y06cq")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = 1.603
+shader_parameter/size = 1.0
+shader_parameter/OCTAVES = 8
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = ExtResource("4_suobb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pqmya"]
+shader = ExtResource("4_5vxdo")
+shader_parameter/pixels = 1000.0
+shader_parameter/color = Color(0.760784, 0.792157, 0.807843, 1)
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.0
+shader_parameter/rotation = 0.0
+shader_parameter/seed = 3.671
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_16h1x"]
+shader = ExtResource("3_y06cq")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = 1.08
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 8
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = ExtResource("10_f3nr0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_slbbn"]
+shader = ExtResource("5_pap3i")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/storm_width = 0.0
+shader_parameter/storm_dither_width = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/seed = 2.246
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 1.0
+shader_parameter/OCTAVES = 8
+shader_parameter/colorramp = ExtResource("10_f3nr0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nm0b8"]
+shader = ExtResource("4_5vxdo")
+shader_parameter/pixels = 1000.0
+shader_parameter/color = Color(0.215686, 0.45098, 0.462745, 1)
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.0
+shader_parameter/rotation = 0.0
+shader_parameter/seed = 2.446
+shader_parameter/circle_amount = 2.5
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 2.0
+shader_parameter/OCTAVES = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8maw3"]
+shader = ExtResource("3_y06cq")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = 2.366
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 8
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = ExtResource("16_r7kgp")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6u8mn"]
+shader = ExtResource("5_pap3i")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = null
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/storm_width = 0.3
+shader_parameter/storm_dither_width = 0.07
+shader_parameter/scale = 1.0
+shader_parameter/seed = 1.135
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 1.0
+shader_parameter/OCTAVES = 1
+shader_parameter/colorramp = ExtResource("16_r7kgp")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nohev"]
 size = Vector2(1, 1)
 
+[sub_resource type="Gradient" id="1"]
+offsets = PackedFloat32Array(0, 0.143, 0.284345, 0.429, 0.571, 0.71246, 0.857, 1)
+colors = PackedColorArray(0.05172, 0.14699, 0.131512, 1, 0.111186, 0.194327, 0.115054, 1, 0.191517, 0.406028, 0.412207, 1, 0.278185, 0.554382, 0.575752, 1, 0.384714, 0.711948, 0.705552, 1, 0.423477, 0.751041, 0.83007, 1, 0.690189, 0.796097, 0.932229, 1, 0.816931, 0.818178, 0.921572, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qvhu4"]
+gradient = SubResource("1")
+
 [node name="Main" type="Node2D"]
-script = ExtResource("1_6odfi")
+
+[node name="Simulation" type="Node2D" parent="."]
+
+[node name="Data" type="Node2D" parent="Simulation"]
+
+[node name="file" type="Node2D" parent="Simulation/Data"]
+
+[node name="Space" type="Node2D" parent="Simulation"]
+scale = Vector2(6, 6)
+
+[node name="Stars" type="Node2D" parent="Simulation/Space"]
+
+[node name="Sol" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Sol"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Sol/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Sol/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Sol/Star/StarContainer/Star"]
+material = SubResource("ShaderMaterial_mcpa3")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Sol/Star/StarContainer/Star"]
+material = SubResource("ShaderMaterial_0v8sk")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Sol/Star/StarContainer/Star"]
+material = SubResource("ShaderMaterial_tyf58")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Sol"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Sol/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Sol/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Sol"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Sol"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Sol"]
+modulate = Color(0.666569, 0.666569, 0.666569, 1)
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Sol/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Sol/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Sol/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars"]
+scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Simulation/Space/Stars/stations"]
+position = Vector2(370, -405)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_3f4ur")
+
+[node name="Proxima Centauri" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(9000, -9000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Proxima Centauri"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Proxima Centauri/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Proxima Centauri/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Proxima Centauri/star/starShader/star"]
+material = SubResource("ShaderMaterial_fjn6f")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Proxima Centauri/star/starShader/star"]
+material = SubResource("ShaderMaterial_e6hxo")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Proxima Centauri/star/starShader/star"]
+material = SubResource("ShaderMaterial_nqi1u")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Proxima Centauri"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Proxima Centauri"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Proxima Centauri"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Proxima Centauri"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Proxima Centauri/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Proxima Centauri/planets/moons"]
+
+[node name="Rigel Kentaurus A" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(10000, -9000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Rigel Kentaurus A/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Rigel Kentaurus A/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Rigel Kentaurus A/Star/StarContainer/Star"]
+material = SubResource("ShaderMaterial_m4n15")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Rigel Kentaurus A/Star/StarContainer/Star"]
+material = SubResource("ShaderMaterial_tvnxv")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Rigel Kentaurus A/Star/StarContainer/Star"]
+material = SubResource("ShaderMaterial_qn5xi")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Rigel Kentaurus A/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Rigel Kentaurus A/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Rigel Kentaurus A/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus A"]
+
+[node name="Rigel Kentaurus B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(1200, -9000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus B"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Rigel Kentaurus B/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Rigel Kentaurus B/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Rigel Kentaurus B/star/starShader/star"]
+material = SubResource("ShaderMaterial_753wq")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Rigel Kentaurus B/star/starShader/star"]
+material = SubResource("ShaderMaterial_eos5b")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Rigel Kentaurus B/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus B"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Rigel Kentaurus B/planets/moons"]
+
+[node name="Barnard\'s Star" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(15000, 9000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Barnard\'s Star"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Barnard\'s Star/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Barnard\'s Star/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Barnard\'s Star/star/starShader/star"]
+material = SubResource("ShaderMaterial_pqmya")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Barnard\'s Star/star/starShader/star"]
+material = SubResource("ShaderMaterial_16h1x")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Barnard\'s Star/star/starShader/star"]
+material = SubResource("ShaderMaterial_slbbn")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Barnard\'s Star"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Barnard\'s Star"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Barnard\'s Star"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Barnard\'s Star"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Barnard\'s Star/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Barnard\'s Star/planets/moons"]
+
+[node name="Gl 406" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(6000, 12000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 406"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 406/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 406/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 406/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 406/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 406/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 406"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 406"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 406"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 406"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 406/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 406/planets/moons"]
+
+[node name="Lalande 21185" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-11000, -1000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Lalande 21185"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Lalande 21185/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Lalande 21185/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Lalande 21185/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Lalande 21185/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Lalande 21185/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Lalande 21185"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Lalande 21185"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Lalande 21185"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Lalande 21185"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Lalande 21185/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Lalande 21185/planets/moons"]
+
+[node name="Sirius" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-18000, -19000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Sirius"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Sirius/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Sirius/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Sirius/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Sirius/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Sirius/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Sirius"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Sirius"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Sirius"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Sirius"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Sirius/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Sirius/planets/moons"]
+
+[node name="Gl 244 B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-18000, -19000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 244 B"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 244 B/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 244 B/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 244 B/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 244 B/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 244 B/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 244 B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 244 B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 244 B"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 244 B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 244 B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 244 B/planets/moons"]
+
+[node name="UV Ceti A" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-6000, 1000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/UV Ceti A"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/UV Ceti A/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/UV Ceti A/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/UV Ceti A/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/UV Ceti A/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/UV Ceti A/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/UV Ceti A"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/UV Ceti A"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/UV Ceti A"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/UV Ceti A"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/UV Ceti A/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/UV Ceti A/planets/moons"]
+
+[node name="UV Ceti B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-7000, 2000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/UV Ceti B/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/UV Ceti B/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/UV Ceti B/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/UV Ceti B/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/UV Ceti B/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/UV Ceti B/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/UV Ceti B/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/UV Ceti B/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/UV Ceti B"]
+
+[node name="Gl 729" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(29000, 6000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Gl 729"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Gl 729/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Gl 729/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 729/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 729/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 729/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 729"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 729/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 729/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 729"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 729"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 729"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Gl 729/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Gl 729/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Gl 729/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 729"]
+
+[node name="18 Epsilon Eridani" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-21000, -6000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/18 Epsilon Eridani/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/18 Epsilon Eridani/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/18 Epsilon Eridani/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/18 Epsilon Eridani/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/18 Epsilon Eridani/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/18 Epsilon Eridani/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/18 Epsilon Eridani/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/18 Epsilon Eridani/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/18 Epsilon Eridani"]
+
+[node name="Gl 905" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-1000, 28000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 905"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 905/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 905/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 905/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 905/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 905/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 905"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 905"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 905"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 905"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 905/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 905/planets/moons"]
+
+[node name="Gl 447" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(0.04, -17000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 447"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 447/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 447/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 447/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 447/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 447/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 447"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 447"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 447"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 447"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 447/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 447/planets/moons"]
+
+[node name="Lacaille 9352" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(13000, 1000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Lacaille 9352"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Lacaille 9352/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Lacaille 9352/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Lacaille 9352/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Lacaille 9352/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Lacaille 9352/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Lacaille 9352"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Lacaille 9352"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Lacaille 9352"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Lacaille 9352"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Lacaille 9352/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Lacaille 9352/planets/moons"]
+
+[node name="EZ Aquarii" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(13000, 14000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/EZ Aquarii"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/EZ Aquarii/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/EZ Aquarii/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/EZ Aquarii/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/EZ Aquarii/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/EZ Aquarii/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/EZ Aquarii"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/EZ Aquarii"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/EZ Aquarii"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/EZ Aquarii"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/EZ Aquarii/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/EZ Aquarii/planets/moons"]
+
+[node name="Procyon" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-28000, -19000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Procyon"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Procyon/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Procyon/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Procyon/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Procyon/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Procyon/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Procyon"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Procyon"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Procyon"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Procyon"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Procyon/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Procyon/planets/moons"]
+
+[node name="Gl 280 B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-27000, -18000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 280 B"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 280 B/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 280 B/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 280 B/star/starShader/star"]
+material = SubResource("ShaderMaterial_nm0b8")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 280 B/star/starShader/star"]
+material = SubResource("ShaderMaterial_8maw3")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 280 B/star/starShader/star"]
+material = SubResource("ShaderMaterial_6u8mn")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 280 B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 280 B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 280 B"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 280 B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 280 B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 280 B/planets/moons"]
+
+[node name="Gl 725 B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(0, 32000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 725 B"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 725 B/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 725 B/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 725 B/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 725 B/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 725 B/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 725 B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 725 B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 725 B"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 725 B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 725 B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 725 B/planets/moons"]
+
+[node name="61 Cygni A" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(5000, 34000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/61 Cygni A/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/61 Cygni A/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/61 Cygni A/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/61 Cygni A/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/61 Cygni A/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/61 Cygni A/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/61 Cygni A/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/61 Cygni A/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/61 Cygni A"]
+
+[node name="61 Cygni B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(6000, 36000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/61 Cygni B/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/61 Cygni B/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/61 Cygni B/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/61 Cygni B/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/61 Cygni B/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/61 Cygni B/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/61 Cygni B/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/61 Cygni B/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/61 Cygni B"]
+
+[node name="DX Cancri" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-29000, -9000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/DX Cancri"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/DX Cancri/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/DX Cancri/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/DX Cancri/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/DX Cancri/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/DX Cancri/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/DX Cancri"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/DX Cancri/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/DX Cancri/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/DX Cancri"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/DX Cancri"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/DX Cancri"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/DX Cancri/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/DX Cancri/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/DX Cancri/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/DX Cancri"]
+
+[node name="GX Andromedae" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(15000, 30000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/GX Andromedae"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/GX Andromedae/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/GX Andromedae/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/GX Andromedae/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/GX Andromedae/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/GX Andromedae/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/GX Andromedae"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/GX Andromedae"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/GX Andromedae"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/GX Andromedae"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/GX Andromedae/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/GX Andromedae/planets/moons"]
+
+[node name="GQ Andromedae" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-15000, 30000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/GQ Andromedae"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/GQ Andromedae/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/GQ Andromedae/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/GQ Andromedae/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/GQ Andromedae/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/GQ Andromedae/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/GQ Andromedae"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/GQ Andromedae"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/GQ Andromedae"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/GQ Andromedae"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/GQ Andromedae/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/GQ Andromedae/planets/moons"]
+
+[node name="52 Tau Ceti" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-10000, 1000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/52 Tau Ceti"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/52 Tau Ceti/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/52 Tau Ceti/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/52 Tau Ceti/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/52 Tau Ceti/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/52 Tau Ceti/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/52 Tau Ceti"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/52 Tau Ceti"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/52 Tau Ceti"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/52 Tau Ceti"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/52 Tau Ceti/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/52 Tau Ceti/planets/moons"]
+
+[node name="Gl 725" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(0, 33000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 725"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 725/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 725/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 725/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 725/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 725/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 725"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 725"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 725"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 725"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 725/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 725/planets/moons"]
+
+[node name="Epsilon Indi" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(22000, -1000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Epsilon Indi"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Epsilon Indi/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Epsilon Indi/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Epsilon Indi/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Epsilon Indi/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Epsilon Indi/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Epsilon Indi"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Epsilon Indi"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Epsilon Indi"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Epsilon Indi"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Epsilon Indi/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Epsilon Indi/planets/moons"]
+
+[node name="Luyten\'s Star" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-32000, -20000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Luyten\'s Star"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Luyten\'s Star/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Luyten\'s Star/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Luyten\'s Star/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Luyten\'s Star/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Luyten\'s Star/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Luyten\'s Star"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Luyten\'s Star"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Luyten\'s Star"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Luyten\'s Star"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Luyten\'s Star/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Luyten\'s Star/planets/moons"]
+
+[node name="Kapteyn\'s Star" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-11000, 30000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Kapteyn\'s Star"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Kapteyn\'s Star/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Kapteyn\'s Star/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Kapteyn\'s Star/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Kapteyn\'s Star/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Kapteyn\'s Star/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Kapteyn\'s Star"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Kapteyn\'s Star"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Kapteyn\'s Star"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Kapteyn\'s Star"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Kapteyn\'s Star/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Kapteyn\'s Star/planets/moons"]
+
+[node name="Lacaille 8760" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(28000, 20000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Lacaille 8760/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Lacaille 8760/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Lacaille 8760/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Lacaille 8760/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Lacaille 8760/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Lacaille 8760/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Lacaille 8760/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Lacaille 8760/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Lacaille 8760"]
+
+[node name="Krüger 60" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(10000, 39000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Krüger 60"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Krüger 60/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Krüger 60/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Krüger 60/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Krüger 60/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Krüger 60/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Krüger 60"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Krüger 60/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Krüger 60/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Krüger 60"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Krüger 60"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Krüger 60"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Krüger 60/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Krüger 60/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Krüger 60/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Krüger 60"]
+
+[node name="DO Cephei" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(10000, 39000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/DO Cephei"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/DO Cephei/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/DO Cephei/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/DO Cephei/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/DO Cephei/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/DO Cephei/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/DO Cephei"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/DO Cephei/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/DO Cephei/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/DO Cephei"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/DO Cephei"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/DO Cephei"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/DO Cephei/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/DO Cephei/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/DO Cephei/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/DO Cephei"]
+
+[node name="V577 Monocerotis A" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-34000, -22000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis A"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/V577 Monocerotis A/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/V577 Monocerotis A/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/V577 Monocerotis A/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/V577 Monocerotis A/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/V577 Monocerotis A/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis A"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis A"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis A"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis A"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis A/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis A/planets/moons"]
+
+[node name="V577 Monocerotis B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-33000, -21000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis B"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/V577 Monocerotis B/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/V577 Monocerotis B/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/V577 Monocerotis B/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/V577 Monocerotis B/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/V577 Monocerotis B/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis B"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/V577 Monocerotis B/planets/moons"]
+
+[node name="GJ 1061" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-8000, -25000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/GJ 1061"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/GJ 1061/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/GJ 1061/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/GJ 1061/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/GJ 1061/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/GJ 1061/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/GJ 1061"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/GJ 1061"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/GJ 1061"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/GJ 1061"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/GJ 1061/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/GJ 1061/planets/moons"]
+
+[node name="FL Virginis A" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(4000, -13000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/FL Virginis A"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/FL Virginis A/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/FL Virginis A/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/FL Virginis A/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/FL Virginis A/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/FL Virginis A/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/FL Virginis A"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/FL Virginis A"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/FL Virginis A"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/FL Virginis A"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/FL Virginis A/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/FL Virginis A/planets/moons"]
+
+[node name="FL Virginis B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(4000, -13000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/FL Virginis B"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/FL Virginis B/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/FL Virginis B/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/FL Virginis B/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/FL Virginis B/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/FL Virginis B/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/FL Virginis B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/FL Virginis B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/FL Virginis B"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/FL Virginis B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/FL Virginis B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/FL Virginis B/planets/moons"]
+
+[node name="Gl 563_2B" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(33000, -16000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2B"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 563_2B/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 563_2B/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 563_2B/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 563_2B/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 563_2B/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2B"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2B"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2B"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2B"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2B/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2B/planets/moons"]
+
+[node name="BD-12°4523" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(39000, 2000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/BD-12°4523"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/BD-12°4523/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/BD-12°4523/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/BD-12°4523/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/BD-12°4523/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/BD-12°4523/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/BD-12°4523"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/BD-12°4523"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/BD-12°4523"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/BD-12°4523"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/BD-12°4523/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/BD-12°4523/planets/moons"]
+
+[node name="Gl 1" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(10000, -3000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Gl 1"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Gl 1/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Gl 1/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 1/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 1/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 1/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 1"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 1/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 1/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 1"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 1"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 1"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Gl 1/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Gl 1/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Gl 1/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 1"]
+
+[node name="Van Maanen\'s Star" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-13000, 0)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Van Maanen\'s Star/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Van Maanen\'s Star/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Van Maanen\'s Star/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Van Maanen\'s Star/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Van Maanen\'s Star/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Van Maanen\'s Star/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Van Maanen\'s Star/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Van Maanen\'s Star/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Van Maanen\'s Star"]
+
+[node name="Hip 15689" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-25000, -9000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Hip 15689"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Hip 15689/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Hip 15689/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Hip 15689/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Hip 15689/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Hip 15689/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Hip 15689"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Hip 15689/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Hip 15689/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Hip 15689"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Hip 15689"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Hip 15689"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Hip 15689/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Hip 15689/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Hip 15689/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Hip 15689"]
+
+[node name="Gl 563_2" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(35000, -17000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 563_2/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 563_2/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 563_2/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 563_2/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 563_2/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 563_2/planets/moons"]
+
+[node name="Gl 674" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(43000, -13000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 674"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 674/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 674/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 674/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 674/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 674/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 674"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 674"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 674"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 674"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 674/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 674/planets/moons"]
+
+[node name="Gl 687" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-6000, 38000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 687"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 687/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 687/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 687/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 687/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 687/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 687"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 687"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 687"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 687"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 687/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 687/planets/moons"]
+
+[node name="Gl 83_1" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-26000, 16000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Gl 83_1"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Gl 83_1/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Gl 83_1/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 83_1/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 83_1/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 83_1/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 83_1"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 83_1"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 83_1"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 83_1"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 83_1/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 83_1/planets/moons"]
+
+[node name="NN 3522" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-29000, -24000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/NN 3522"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/NN 3522/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/NN 3522/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/NN 3522/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/NN 3522/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/NN 3522/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/NN 3522"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/NN 3522"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/NN 3522"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/NN 3522"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/NN 3522/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/NN 3522/planets/moons"]
+
+[node name="Innes\' Star" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(14000, -4300)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/Innes\' Star"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/Innes\' Star/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/Innes\' Star/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Innes\' Star/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Innes\' Star/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Innes\' Star/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Innes\' Star"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Innes\' Star"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Innes\' Star"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Innes\' Star"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Innes\' Star/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Innes\' Star/planets/moons"]
+
+[node name="NN 3622" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(-5000, -34000)
+scale = Vector2(0.1, 0.1)
+
+[node name="star" type="Node2D" parent="Simulation/Space/Stars/NN 3622"]
+
+[node name="starShader" type="CenterContainer" parent="Simulation/Space/Stars/NN 3622/star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="Simulation/Space/Stars/NN 3622/star/starShader"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/NN 3622/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/NN 3622/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/NN 3622/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/NN 3622"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/NN 3622"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/NN 3622"]
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/NN 3622"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/NN 3622/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/NN 3622/planets/moons"]
+
+[node name="Gl 440" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(2000, -41000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Gl 440"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Gl 440/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Gl 440/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Gl 440/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Gl 440/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Gl 440/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Gl 440"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Gl 440/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 440/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Gl 440"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Gl 440"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Gl 440"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Gl 440/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Gl 440/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Gl 440/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Gl 440"]
+
+[node name="Hip 114110" type="Node2D" parent="Simulation/Space/Stars" groups=["Stars"]]
+position = Vector2(12000, 17000)
+scale = Vector2(0.1, 0.1)
+
+[node name="Star" type="Node2D" parent="Simulation/Space/Stars/Hip 114110"]
+
+[node name="StarContainer" type="CenterContainer" parent="Simulation/Space/Stars/Hip 114110/Star"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Star" type="Control" parent="Simulation/Space/Stars/Hip 114110/Star/StarContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="Blobs" type="ColorRect" parent="Simulation/Space/Stars/Hip 114110/Star/StarContainer/Star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="Simulation/Space/Stars/Hip 114110/Star/StarContainer/Star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="Simulation/Space/Stars/Hip 114110/Star/StarContainer/Star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="Simulation/Space/Stars/Hip 114110"]
+
+[node name="moons" type="Node2D" parent="Simulation/Space/Stars/Hip 114110/planets"]
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Hip 114110/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="Simulation/Space/Stars/Hip 114110"]
+
+[node name="structures" type="Node2D" parent="Simulation/Space/Stars/Hip 114110"]
+
+[node name="gates" type="Node2D" parent="Simulation/Space/Stars/Hip 114110"]
+
+[node name="Gate 0" type="Sprite2D" parent="Simulation/Space/Stars/Hip 114110/gates"]
+position = Vector2(100, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 1" type="Sprite2D" parent="Simulation/Space/Stars/Hip 114110/gates"]
+position = Vector2(200, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="Gate 2" type="Sprite2D" parent="Simulation/Space/Stars/Hip 114110/gates"]
+position = Vector2(300, -100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="Simulation/Space/Stars/Hip 114110"]
+
+[node name="Ships" type="Node2D" parent="Simulation"]
+
+[node name="Player" type="RigidBody2D" parent="Simulation/Ships"]
+modulate = Color(0.847474, 0.847474, 0.847474, 1)
+gravity_scale = 0.0
+script = ExtResource("18_rs7pf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Simulation/Ships/Player"]
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("19_jlgv4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Simulation/Ships/Player"]
+shape = SubResource("RectangleShape2D_nohev")
+
+[node name="Camera2" type="Camera2D" parent="Simulation/Ships/Player"]
+script = ExtResource("20_2ufx2")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.15, 1.15)
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(2560, 2560)
-script = ExtResource("2_xxy3g")
 
-[node name="Sol" type="Node2D" parent="."]
-scale = Vector2(20, 20)
-script = ExtResource("3_fijde")
-
-[node name="Asteroids" type="Node2D" parent="Sol"]
-
-[node name="Ships" type="Node2D" parent="Sol"]
-
-[node name="Planets" type="Node2D" parent="."]
-scale = Vector2(6, 6)
-
-[node name="Stations" type="Node2D" parent="Planets"]
-
-[node name="Earth" type="Node2D" parent="Planets"]
-position = Vector2(333.333, -20)
-script = ExtResource("4_jr7s5")
-
-[node name="UI" type="Control" parent="."]
+[node name="BackgroundGenerator" type="Control" parent="ParallaxBackground/ParallaxLayer3"]
 layout_mode = 3
 anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("20_8sb16")
+colorscheme = SubResource("GradientTexture2D_qvhu4")
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" type="RigidBody2D" parent="."]
-gravity_scale = 0.0
-script = ExtResource("5_8oorp")
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground/ParallaxLayer3/BackgroundGenerator"]
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-rotation = 1.5708
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_pbdr0")
+[node name="BackGround" type="ColorRect" parent="ParallaxBackground/ParallaxLayer3/BackgroundGenerator/CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_il63l")
+[node name="StarStuff" type="ColorRect" parent="ParallaxBackground/ParallaxLayer3/BackgroundGenerator"]
+material = ExtResource("21_gowp7")
+custom_minimum_size = Vector2(2560, 2560)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2560.0
+offset_bottom = 2560.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 100.0
-drag_left_margin = 0.0
-drag_top_margin = 0.0
-drag_right_margin = 0.0
-drag_bottom_margin = 0.0
-script = ExtResource("7_vietx")
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="Stars" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0.513726)
+texture = ExtResource("21_taq5u")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="Stars" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.486275)
+texture = ExtResource("21_taq5u")
+centered = false

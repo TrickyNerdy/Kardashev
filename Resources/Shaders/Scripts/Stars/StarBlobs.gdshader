@@ -31,13 +31,13 @@ vec2 rotate(vec2 vec, float angle) {
 
 float circle(vec2 uv) {
 	float invert = 1.0 / circle_amount;
-	
+
 	if (mod(uv.y, invert*2.0) < invert) {
 		uv.x += invert*0.5;
 	}
 	vec2 rand_co = floor(uv*circle_amount)/circle_amount;
 	uv = mod(uv, invert)*circle_amount;
-	
+
 	float r = rand(rand_co);
 	r = clamp(r, invert, 1.0 - invert);
 	float circle = distance(uv, vec2(r));
@@ -48,7 +48,7 @@ float circle(vec2 uv) {
 float noise(vec2 coord){
 	vec2 i = floor(coord);
 	vec2 f = fract(coord);
-		
+
 	float a = rand(i);
 	float b = rand(i + vec2(1.0, 0.0));
 	float c = rand(i + vec2(0.0, 1.0));
@@ -86,17 +86,17 @@ void fragment() {
 	// angle from centered uv's
 	float angle = atan(uv.x - 0.5, uv.y - 0.5);
 	float d = distance(pixelized, vec2(0.5));
-	
-	
+
+
 	float c = 0.0;
 	for(int i = 0; i < 15; i++) {
 		float r = rand(vec2(float(i)));
 		vec2 circleUV = vec2(d, angle);
-		c += circle(circleUV*size -time * time_speed - (1.0/d) * 0.1 + r);
+		c += circle(circleUV*size -TIME * time_speed - (1.0/d) * 0.1 + r);
 	}
-	
+
 	c *= 0.37 - d;
 	c = step(0.07, c - d);
-	
+
 	COLOR = vec4(color.rgb, c * color.a);
 }

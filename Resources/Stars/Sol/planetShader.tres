@@ -1,0 +1,25 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cqav8kkr70ioi"]
+
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader" id="1_8sbmk"]
+
+[resource]
+shader = ExtResource("1_8sbmk")
+shader_parameter/pixels = 1000.0
+shader_parameter/rotation = 0.3
+shader_parameter/light_origin = Vector2(0.3, 0.5)
+shader_parameter/time_speed = 0.2
+shader_parameter/dither_size = 0.0
+shader_parameter/should_dither = false
+shader_parameter/light_border_1 = 1.0
+shader_parameter/light_border_2 = 0.435
+shader_parameter/river_cutoff = 0.116
+shader_parameter/col1 = Color(0.101601, 0.268305, 0.12512, 1)
+shader_parameter/col2 = Color(0.429876, 0.622004, 0.290061, 1)
+shader_parameter/col3 = Color(0.112457, 0.321643, 0.246949, 1)
+shader_parameter/col4 = Color(0.224583, 0.49014, 0.393968, 1)
+shader_parameter/river_col = Color(0.200369, 0.474244, 0.537217, 1)
+shader_parameter/river_col_dark = Color(0.139853, 0.273338, 0.374132, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 4.0
+shader_parameter/time = 0.0

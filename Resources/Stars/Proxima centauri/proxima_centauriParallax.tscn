@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://blk151ipo03ag"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/shader/BackgroundGenerator.gd" id="1_yhds8"]
+[ext_resource type="Material" uid="uid://cc8eo8fqrgg2t" path="res://Resources/Scenes/shaders/proxima_centauriBG.tres" id="3_dx17d"]
+
+[sub_resource type="Gradient" id="1"]
+offsets = PackedFloat32Array(0, 0.143, 0.284345, 0.429, 0.571, 0.71246, 0.857, 1)
+colors = PackedColorArray(0.05172, 0.14699, 0.131512, 1, 0.111186, 0.194327, 0.115054, 1, 0.191517, 0.406028, 0.412207, 1, 0.278185, 0.554382, 0.575752, 1, 0.384714, 0.711948, 0.705552, 1, 0.423477, 0.751041, 0.83007, 1, 0.690189, 0.796097, 0.932229, 1, 0.816931, 0.818178, 0.921572, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qvhu4"]
+gradient = SubResource("1")
+
+[node name="solParallax" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="BackgroundGenerator" type="Control" parent="ParallaxLayer"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_yhds8")
+colorscheme = SubResource("GradientTexture2D_qvhu4")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxLayer/BackgroundGenerator"]
+
+[node name="Background" type="ColorRect" parent="ParallaxLayer/BackgroundGenerator/CanvasLayer"]
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="StarStuff" type="ColorRect" parent="ParallaxLayer/BackgroundGenerator"]
+material = ExtResource("3_dx17d")
+layout_mode = 0
+offset_right = 2560.0
+offset_bottom = 2560.0
+metadata/_edit_use_anchors_ = true

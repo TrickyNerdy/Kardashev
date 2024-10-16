@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://834hsiavcwg3"]
+
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/Star.gdshader" id="1_tgpbm"]
+
+[sub_resource type="Gradient" id="Gradient_gwpmn"]
+offsets = PackedFloat32Array(0, 0.193133, 0.39485, 0.566524, 0.716738)
+colors = PackedColorArray(0.661504, 0.00919759, 0.610259, 1, 0.675517, 0.32971, 0.585258, 1, 0.961099, 0.630182, 0.891777, 1, 0.109323, 0.643069, 0.808754, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b1trr"]
+gradient = SubResource("Gradient_gwpmn")
+
+[resource]
+shader = ExtResource("1_tgpbm")
+shader_parameter/pixels = 400.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 3.51
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = null
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = 4
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = SubResource("GradientTexture2D_b1trr")

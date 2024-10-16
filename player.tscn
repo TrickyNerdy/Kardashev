@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bueocqptynplx"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/Player/Ship/Player.cs" id="1_yi8eo"]
+[ext_resource type="Texture2D" uid="uid://c4jd0wjvturaq" path="res://Resources/Art/Ships/AsgardSciCruser.png" id="2_8k4tm"]
+[ext_resource type="Script" path="res://Resources/Scripts/Main/Camera/Camera.cs" id="3_pasuj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nohev"]
+size = Vector2(1, 1)
+
+[node name="Player" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_yi8eo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_8k4tm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nohev")
+
+[node name="Camera2" type="Camera2D" parent="."]
+script = ExtResource("3_pasuj")

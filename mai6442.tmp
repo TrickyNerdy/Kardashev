@@ -1,0 +1,596 @@
+[gd_scene load_steps=33 format=3 uid="uid://p3ehoi8bbjph"]
+
+[ext_resource type="Material" uid="uid://dt2x16dh7xb20" path="res://Resources/Stars/sol/solStarBlobsMat.tres" id="2_4koep"]
+[ext_resource type="PackedScene" uid="uid://bueocqptynplx" path="res://player.tscn" id="3_2bovq"]
+[ext_resource type="Material" uid="uid://df7bwthg8nu3p" path="res://Resources/Stars/sol/solStarMat.tres" id="3_x1gbl"]
+[ext_resource type="Material" uid="uid://cb8ph3r3k6ara" path="res://Resources/Stars/sol/solStarFlaresMat.tres" id="4_pmbe7"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Stars/Star.gd" id="7_h1riu"]
+[ext_resource type="Material" uid="uid://cqav8kkr70ioi" path="res://Resources/Stars/sol/planetShader.tres" id="8_yyxav"]
+[ext_resource type="Material" uid="uid://drtb61toducpa" path="res://Resources/Stars/proxima centauri/proxima_centauriStarBlobsMat.tres" id="9_1embu"]
+[ext_resource type="Material" uid="uid://1l3vmtlv5a0w" path="res://Resources/Stars/proxima centauri/proxima_centauriStarMat.tres" id="10_5ec65"]
+[ext_resource type="Texture2D" uid="uid://jokcxh3114vv" path="res://Resources/Art/Other/gate.png" id="11_7ppsl"]
+[ext_resource type="Texture2D" uid="uid://djdx8tm3icssw" path="res://Resources/Resource/proxima centauri.tres" id="11_70viw"]
+[ext_resource type="Material" uid="uid://bl7a35bj8qmlk" path="res://Resources/Stars/proxima centauri/proxima_centauriStarFlaresMat.tres" id="11_3710n"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Planets/Planet.gd" id="12_aghmo"]
+[ext_resource type="Material" uid="uid://bmrudcikpq2j8" path="res://Resources/Stars/Rigel Kentaurus A/Rigel_Kentaurus_AStarBlobsMat.tres" id="13_8y36a"]
+[ext_resource type="Shader" path="res://GasPlanet.gdshader" id="13_68y61"]
+[ext_resource type="Shader" path="res://Ring.gdshader" id="13_hiuyj"]
+[ext_resource type="Script" path="res://GasPlanetLayer.gd" id="14_0fr7g"]
+[ext_resource type="Material" uid="uid://834hsiavcwg3" path="res://Resources/Stars/proxima centauri/Rigel_Kentaurus_AStarMat.tres" id="14_6s5lw"]
+[ext_resource type="Script" path="res://GasPlanetLayers.gd" id="14_i8njx"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/Clouds.gdshader" id="14_jqrku"]
+[ext_resource type="Material" uid="uid://bhvuor3w3gfkc" path="res://Resources/Stars/proxima centauri/Rigel_Kentaurus_AStarFlaresMat.tres" id="15_1kqn1"]
+[ext_resource type="Shader" path="res://gasLayer.gdshader" id="15_gp2mr"]
+[ext_resource type="Shader" path="res://GasLayers.gdshader" id="15_s1g51"]
+[ext_resource type="Script" path="res://Resources/Scripts/shader/BackgroundGenerator.gd" id="20_8sb16"]
+[ext_resource type="Material" uid="uid://cpgdr1a5g5sqx" path="res://Resources/Scenes/shaders/SolBG.tres" id="21_gowp7"]
+[ext_resource type="Texture2D" uid="uid://5tbr7jsj56hf" path="res://Resources/Art/Starfield.png" id="21_taq5u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gwx1c"]
+shader = ExtResource("14_jqrku")
+shader_parameter/pixels = 250.0
+shader_parameter/rotation = 0.0
+shader_parameter/cloud_cover = 0.363
+shader_parameter/light_origin = Vector2(0.14, 0.295)
+shader_parameter/time_speed = 0.2
+shader_parameter/stretch = 3.0
+shader_parameter/cloud_curve = 2.0
+shader_parameter/light_border_1 = 0.52
+shader_parameter/light_border_2 = 0.709
+shader_parameter/base_color = Color(0.76662, 0.76662, 0.76662, 1)
+shader_parameter/outline_color = Color(0.708019, 0.767877, 0.775983, 1)
+shader_parameter/shadow_base_color = Color(0.6, 0.647059, 0.643137, 1)
+shader_parameter/shadow_outline_color = Color(0.72549, 0.74902, 0.764706, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 6.548
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j876d"]
+shader = ExtResource("13_68y61")
+shader_parameter/pixels = 1000.0
+shader_parameter/rotation = 0.305
+shader_parameter/cloud_cover = 0.211
+shader_parameter/light_origin = Vector2(0.39, 0.39)
+shader_parameter/time_speed = 0.1
+shader_parameter/stretch = 2.0
+shader_parameter/cloud_curve = 1.3
+shader_parameter/light_border_1 = 0.52
+shader_parameter/light_border_2 = 0.62
+shader_parameter/bands = 2.0
+shader_parameter/should_dither = false
+shader_parameter/n_colors = 4
+shader_parameter/colors = PackedColorArray(0.218986, 0.530741, 0.595752, 1, 0.471911, 0.705275, 0.429494, 1, 0.535182, 0.43469, 0.723776, 1, 0.612848, 0.653462, 0.826385, 1)
+shader_parameter/dark_colors = PackedColorArray(0.460508, 0.689666, 0.738428, 1, 0.465384, 0.537925, 0.257844, 1, 0.735032, 0.564566, 0.298324, 1, 0.388724, 0.616655, 0.481208, 1)
+shader_parameter/size = 9.0
+shader_parameter/OCTAVES = 4
+shader_parameter/seed = 2.707
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i68rf"]
+shader = ExtResource("13_68y61")
+shader_parameter/pixels = 1000.0
+shader_parameter/rotation = 0.381
+shader_parameter/cloud_cover = 0.0
+shader_parameter/light_origin = Vector2(0.365, 0.095)
+shader_parameter/time_speed = 0.1
+shader_parameter/stretch = 2.0
+shader_parameter/cloud_curve = 1.3
+shader_parameter/light_border_1 = 0.479
+shader_parameter/light_border_2 = 0.295
+shader_parameter/bands = 2.0
+shader_parameter/should_dither = false
+shader_parameter/n_colors = 4
+shader_parameter/colors = PackedColorArray(0.70489, 0.489327, 0.270006, 1, 0.749941, 0.471497, 0.585708, 1, 0.113498, 0.263915, 0.1608, 1, 0.253873, 0.429575, 0.425425, 1)
+shader_parameter/dark_colors = PackedColorArray(0.271817, 0.63447, 0.772189, 1, 0.161191, 0.309741, 0.35134, 1, 0.35271, 0.471512, 0.490458, 1, 0.635618, 0.820409, 0.738132, 1)
+shader_parameter/size = 9.0
+shader_parameter/OCTAVES = 4
+shader_parameter/seed = 2.825
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32jo2"]
+shader = ExtResource("15_s1g51")
+shader_parameter/pixels = 1000.0
+shader_parameter/rotation = 0.581
+shader_parameter/cloud_cover = 0.0
+shader_parameter/light_origin = Vector2(0.435, 0.32)
+shader_parameter/time_speed = 0.2
+shader_parameter/stretch = 2.0
+shader_parameter/cloud_curve = 1.3
+shader_parameter/light_border_1 = 0.52
+shader_parameter/light_border_2 = 0.62
+shader_parameter/bands = 1.0
+shader_parameter/should_dither = false
+shader_parameter/n_colors = 4
+shader_parameter/colors = PackedColorArray(0.885976, 0.54031, 0.313795, 1, 0.587234, 0.293981, 0.203432, 1, 0.513662, 0.262956, 0.10803, 1, 0.848343, 0.496771, 0.333608, 1)
+shader_parameter/dark_colors = PackedColorArray(0.841742, 0.79233, 0.484387, 1, 0.653082, 0.394881, 0.349807, 1, 0.491116, 0.457727, 0.208956, 1)
+shader_parameter/size = 9.0
+shader_parameter/OCTAVES = 8
+shader_parameter/seed = 4.401
+shader_parameter/time = -0.15
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dt8w6"]
+shader = ExtResource("13_hiuyj")
+shader_parameter/pixels = 1000.0
+shader_parameter/rotation = 0.746
+shader_parameter/light_origin = Vector2(0.75, 0.895)
+shader_parameter/time_speed = 0.2
+shader_parameter/light_border_1 = 0.52
+shader_parameter/light_border_2 = 0.62
+shader_parameter/ring_width = 0.083
+shader_parameter/ring_perspective = 1.685
+shader_parameter/scale_rel_to_planet = 3.055
+shader_parameter/n_colors = 4
+shader_parameter/colors = PackedColorArray(0.403922, 0.54902, 0.423529, 1, 0.574977, 0.506285, 0.589955, 1, 0.747239, 0.53612, 0.397594, 1)
+shader_parameter/dark_colors = PackedColorArray(0.818239, 0.59605, 0.43019, 1, 0.607531, 0.400944, 0.424147, 1, 0.282493, 0.36932, 0.308524, 1, 0.535775, 0.705145, 0.657203, 1)
+shader_parameter/size = 9.0
+shader_parameter/OCTAVES = 8
+shader_parameter/seed = 3.49
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tunnr"]
+shader = ExtResource("15_gp2mr")
+shader_parameter/pixels = 1000.0
+shader_parameter/rotation = 0.128
+shader_parameter/cloud_cover = 0.0
+shader_parameter/light_origin = Vector2(1.035, 0.375)
+shader_parameter/time_speed = 0.2
+shader_parameter/stretch = 1.0
+shader_parameter/cloud_curve = 1.0
+shader_parameter/light_border_1 = 0.774
+shader_parameter/light_border_2 = 0.812
+shader_parameter/bands = 2.0
+shader_parameter/should_dither = false
+shader_parameter/n_colors = 3
+shader_parameter/colors = PackedColorArray(0.246885, 0.429157, 0.812511, 1, 0.0998626, 0.280102, 0.373162, 1, 0.252487, 0.40008, 0.413316, 1)
+shader_parameter/dark_colors = PackedColorArray(0.687215, 0.687215, 0.687215, 1, 0.145372, 0.399263, 0.408197, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 3.276
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4yxqo"]
+shader = ExtResource("14_jqrku")
+shader_parameter/pixels = 250.0
+shader_parameter/rotation = 0.0
+shader_parameter/cloud_cover = 0.363
+shader_parameter/light_origin = Vector2(0.14, 0.295)
+shader_parameter/time_speed = 0.2
+shader_parameter/stretch = 3.0
+shader_parameter/cloud_curve = 2.0
+shader_parameter/light_border_1 = 0.52
+shader_parameter/light_border_2 = 0.709
+shader_parameter/base_color = Color(0.76662, 0.76662, 0.76662, 1)
+shader_parameter/outline_color = Color(0.708019, 0.767877, 0.775983, 1)
+shader_parameter/shadow_base_color = Color(0.6, 0.647059, 0.643137, 1)
+shader_parameter/shadow_outline_color = Color(0.72549, 0.74902, 0.764706, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 6.548
+shader_parameter/time = 0.0
+
+[node name="main" type="Node2D"]
+
+[node name="simulation" type="Node2D" parent="."]
+
+[node name="data" type="Node2D" parent="simulation"]
+
+[node name="file" type="Node2D" parent="simulation/data"]
+
+[node name="space" type="Node2D" parent="simulation"]
+
+[node name="stars" type="Node2D" parent="simulation/space"]
+
+[node name="sol" type="Node2D" parent="simulation/space/stars" groups=["Stars"]]
+scale = Vector2(0.2, 0.2)
+
+[node name="star" type="Node2D" parent="simulation/space/stars/sol"]
+
+[node name="starShader" type="CenterContainer" parent="simulation/space/stars/sol/star"]
+custom_minimum_size = Vector2(800, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 800.0
+offset_bottom = 800.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = true
+
+[node name="star" type="Control" parent="simulation/space/stars/sol/star/starShader"]
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="StarBackground" type="ColorRect" parent="simulation/space/stars/sol/star/starShader/star"]
+material = ExtResource("2_4koep")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -900.0
+offset_top = -900.0
+offset_right = 900.0
+offset_bottom = 900.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="simulation/space/stars/sol/star/starShader/star"]
+material = ExtResource("3_x1gbl")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="simulation/space/stars/sol/star/starShader/star"]
+material = ExtResource("4_pmbe7")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="simulation/space/stars/sol/star"]
+
+[node name="planetShader" type="CenterContainer" parent="simulation/space/stars/sol/star/planets"]
+custom_minimum_size = Vector2(800, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2000.0
+offset_top = -400.0
+offset_right = 2800.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="simulation/space/stars/sol/star/planets/planetShader"]
+layout_mode = 2
+script = ExtResource("12_aghmo")
+
+[node name="Land" type="ColorRect" parent="simulation/space/stars/sol/star/planets/planetShader/Control"]
+material = ExtResource("8_yyxav")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cloud" type="ColorRect" parent="simulation/space/stars/sol/star/planets/planetShader/Control"]
+material = SubResource("ShaderMaterial_gwx1c")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="moons" type="Node2D" parent="simulation/space/stars/sol/star/planets"]
+
+[node name="stations" type="Node2D" parent="simulation/space/stars/sol/star/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="simulation/space/stars/sol"]
+
+[node name="structures" type="Node2D" parent="simulation/space/stars/sol"]
+
+[node name="gates" type="Node2D" parent="simulation/space/stars/sol"]
+
+[node name="Sprite2D" type="Sprite2D" parent="simulation/space/stars/sol/gates"]
+position = Vector2(700, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_7ppsl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="simulation/space/stars/sol/gates"]
+position = Vector2(1200, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_7ppsl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="simulation/space/stars/sol/gates"]
+position = Vector2(1700, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_7ppsl")
+
+[node name="stations" type="Node2D" parent="simulation/space/stars/sol"]
+
+[node name="proxima centauri" type="Node2D" parent="simulation/space/stars" groups=["Stars"]]
+position = Vector2(0, -200)
+scale = Vector2(0.2, 0.2)
+
+[node name="star" type="Node2D" parent="simulation/space/stars/proxima centauri"]
+
+[node name="starShader" type="CenterContainer" parent="simulation/space/stars/proxima centauri/star"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="simulation/space/stars/proxima centauri/star/starShader"]
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="StarBackground" type="ColorRect" parent="simulation/space/stars/proxima centauri/star/starShader/star"]
+material = ExtResource("9_1embu")
+custom_minimum_size = Vector2(1800, 1800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="simulation/space/stars/proxima centauri/star/starShader/star"]
+material = ExtResource("10_5ec65")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="simulation/space/stars/proxima centauri/star/starShader/star"]
+material = ExtResource("11_3710n")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -420.0
+offset_right = 380.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="astroids" type="Node2D" parent="simulation/space/stars/proxima centauri"]
+
+[node name="structures" type="Node2D" parent="simulation/space/stars/proxima centauri"]
+
+[node name="gates" type="Node2D" parent="simulation/space/stars/proxima centauri"]
+
+[node name="planets" type="Node2D" parent="simulation/space/stars/proxima centauri"]
+
+[node name="planetShader" type="CenterContainer" parent="simulation/space/stars/proxima centauri/planets"]
+custom_minimum_size = Vector2(800, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2000.0
+offset_top = -400.0
+offset_right = 2800.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="simulation/space/stars/proxima centauri/planets/planetShader"]
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 2
+script = ExtResource("14_i8njx")
+
+[node name="Cloud" type="ColorRect" parent="simulation/space/stars/proxima centauri/planets/planetShader/Control"]
+visible = false
+material = SubResource("ShaderMaterial_j876d")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cloud2" type="ColorRect" parent="simulation/space/stars/proxima centauri/planets/planetShader/Control"]
+visible = false
+material = SubResource("ShaderMaterial_i68rf")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+
+[node name="Planet" type="Control" parent="simulation/space/stars/proxima centauri/planets/planetShader"]
+layout_mode = 2
+script = ExtResource("12_aghmo")
+
+[node name="Planet" type="Control" parent="simulation/space/stars/proxima centauri/planets/planetShader/Planet"]
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_0fr7g")
+
+[node name="GasLayers" type="ColorRect" parent="simulation/space/stars/proxima centauri/planets/planetShader/Planet/Planet"]
+material = SubResource("ShaderMaterial_32jo2")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 0
+offset_left = -0.00012207
+offset_right = 39.9999
+offset_bottom = 40.0
+
+[node name="Ring" type="ColorRect" parent="simulation/space/stars/proxima centauri/planets/planetShader/Planet/Planet"]
+material = SubResource("ShaderMaterial_dt8w6")
+custom_minimum_size = Vector2(1200, 1200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="moons" type="Node2D" parent="simulation/space/stars/proxima centauri/planets"]
+
+[node name="stations" type="Node2D" parent="simulation/space/stars/proxima centauri/planets/moons"]
+
+[node name="Rigel Kentaurus A" type="Node2D" parent="simulation/space/stars" groups=["Stars"]]
+position = Vector2(0, -400)
+scale = Vector2(0.2, 0.2)
+
+[node name="star" type="Node2D" parent="simulation/space/stars/Rigel Kentaurus A"]
+
+[node name="starShader" type="CenterContainer" parent="simulation/space/stars/Rigel Kentaurus A/star"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="simulation/space/stars/Rigel Kentaurus A/star/starShader"]
+layout_mode = 2
+script = ExtResource("7_h1riu")
+
+[node name="StarBackground" type="ColorRect" parent="simulation/space/stars/Rigel Kentaurus A/star/starShader/star"]
+material = ExtResource("13_8y36a")
+custom_minimum_size = Vector2(1800, 1800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -475.0
+offset_top = -475.0
+offset_right = 475.0
+offset_bottom = 475.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="simulation/space/stars/Rigel Kentaurus A/star/starShader/star"]
+material = ExtResource("14_6s5lw")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="simulation/space/stars/Rigel Kentaurus A/star/starShader/star"]
+material = ExtResource("15_1kqn1")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -420.0
+offset_right = 380.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="simulation/space/stars/Rigel Kentaurus A/star"]
+
+[node name="planetShader" type="CenterContainer" parent="simulation/space/stars/Rigel Kentaurus A/star/planets"]
+custom_minimum_size = Vector2(800, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2000.0
+offset_top = -400.0
+offset_right = 2800.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="simulation/space/stars/Rigel Kentaurus A/star/planets/planetShader"]
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 2
+script = ExtResource("12_aghmo")
+
+[node name="Land" type="ColorRect" parent="simulation/space/stars/Rigel Kentaurus A/star/planets/planetShader/Control"]
+material = SubResource("ShaderMaterial_tunnr")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cloud" type="ColorRect" parent="simulation/space/stars/Rigel Kentaurus A/star/planets/planetShader/Control"]
+material = SubResource("ShaderMaterial_4yxqo")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="moons" type="Node2D" parent="simulation/space/stars/Rigel Kentaurus A/star/planets"]
+
+[node name="stations" type="Node2D" parent="simulation/space/stars/Rigel Kentaurus A/star/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="simulation/space/stars/Rigel Kentaurus A"]
+
+[node name="structures" type="Node2D" parent="simulation/space/stars/Rigel Kentaurus A"]
+
+[node name="gates" type="Node2D" parent="simulation/space/stars/Rigel Kentaurus A"]
+
+[node name="Player" parent="simulation/space" instance=ExtResource("3_2bovq")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="BackgroundGenerator" type="Control" parent="ParallaxBackground/ParallaxLayer3"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("20_8sb16")
+colorscheme = ExtResource("11_70viw")
+metadata/_edit_use_anchors_ = true
+
+[node name="StarStuff" type="ColorRect" parent="ParallaxBackground/ParallaxLayer3/BackgroundGenerator"]
+material = ExtResource("21_gowp7")
+layout_mode = 0
+offset_right = 2560.0
+offset_bottom = 2560.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.647059)
+texture = ExtResource("21_taq5u")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0.588235)
+texture = ExtResource("21_taq5u")

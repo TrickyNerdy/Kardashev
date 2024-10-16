@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "VPlC6p+M84itDKFMoUPvBs3OuT/i3hHK73QVoG6xkwZkP4pioion8COi3FpRCAMpCjWsMrfNngkZzUnVIN59+w==",
+  "dgSpecHash": "YJzzo7Glxpo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gwacie\\OneDrive\\Documents\\Godot\\Kardashev\\Main Kardashev.csproj",
+  "projectFilePath": "C:\\Users\\Trick\\source\\repos\\Kardashev\\Main Kardashev.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gwacie\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
-    "C:\\Users\\Gwacie\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
-    "C:\\Users\\Gwacie\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.25\\microsoft.netcore.app.runtime.win-x64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Gwacie\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.25\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Gwacie\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.25\\microsoft.aspnetcore.app.runtime.win-x64.6.0.25.nupkg.sha512"
+    "C:\\Users\\Trick\\.nuget\\packages\\godot.sourcegenerators\\4.3.0\\godot.sourcegenerators.4.3.0.nupkg.sha512",
+    "C:\\Users\\Trick\\.nuget\\packages\\godotsharp\\4.3.0\\godotsharp.4.3.0.nupkg.sha512",
+    "C:\\Users\\Trick\\.nuget\\packages\\godotsharpeditor\\4.3.0\\godotsharpeditor.4.3.0.nupkg.sha512",
+    "C:\\Users\\Trick\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.35\\microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
+    "C:\\Users\\Trick\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.35\\microsoft.windowsdesktop.app.ref.6.0.35.nupkg.sha512",
+    "C:\\Users\\Trick\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.35\\microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512"
   ],
   "logs": []
 }

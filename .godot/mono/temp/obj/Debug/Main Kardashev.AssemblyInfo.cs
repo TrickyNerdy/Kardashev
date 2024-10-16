@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Main Kardashev")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33132d549990dd51c26702c332b792e4c9bc6b28")]
 [assembly: System.Reflection.AssemblyProductAttribute("Main Kardashev")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Main Kardashev")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

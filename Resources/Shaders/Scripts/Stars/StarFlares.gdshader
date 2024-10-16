@@ -35,13 +35,13 @@ vec2 rotate(vec2 vec, float angle) {
 
 float circle(vec2 uv) {
 	float invert = 1.0 / circle_amount;
-	
+
 	if (mod(uv.y, invert*2.0) < invert) {
 		uv.x += invert*0.5;
 	}
 	vec2 rand_co = floor(uv*circle_amount)/circle_amount;
 	uv = mod(uv, invert)*circle_amount;
-	
+
 	float r = rand(rand_co);
 	r = clamp(r, invert, 1.0 - invert);
 	float circle = distance(uv, vec2(r));
@@ -52,7 +52,7 @@ float circle(vec2 uv) {
 float noise(vec2 coord){
 	vec2 i = floor(coord);
 	vec2 f = fract(coord);
-		
+
 	float a = rand(i);
 	float b = rand(i + vec2(1.0, 0.0));
 	float c = rand(i + vec2(0.0, 1.0));
@@ -90,31 +90,31 @@ vec2 spherify(vec2 uv) {
 void fragment() {
 	// pixelize uv
 	vec2 pixelized = floor(UV*pixels)/pixels;
-	
+
 	// use dither val later to interpolate between alpha
 	bool dith = dither(UV, pixelized);
-	
+
 	pixelized = rotate(pixelized, rotation);
-	
+
 	// counter rotation against rotation caused by the way uv's are made later
-	vec2 uv = pixelized;//rotate(pixelized, -time  * time_speed);
-	
+	vec2 uv = pixelized;//rotate(pixelized, -TIME  * time_speed);
+
 	// angle from centered uv's
 	float angle = atan(uv.x - 0.5, uv.y - 0.5) * 0.4;
 	// distance from center
 	float d = distance(pixelized, vec2(0.5));
-	
+
 	// we make uv circular here to have eternally outward moving stuff
 	vec2 circleUV = vec2(d, angle);
-	
+
 	// two types of noise values
-	float n = fbm(circleUV*size -time * time_speed);
+	float n = fbm(circleUV*size -TIME * time_speed);
 	float nc = circle(circleUV*scale -time * time_speed + n);
-	
+
 	nc *= 1.5;
 	float n2 = fbm(circleUV*size -time + vec2(100, 100));
 	nc -= n2 * 0.1;
-	
+
 	// our alpha, default 0
 	float a = 0.0;
 	if (1.0 - d > nc) {
@@ -125,11 +125,11 @@ void fragment() {
 			a = 1.0;
 		}
 	}
-	
+
 	// use our two noise values to assign colors
 	float interpolate = floor(n2 + nc);
 	vec4 col = texture(colorramp, vec2(interpolate, 0.0));
-	
+
 	// final step to not have everything appear from the center
 	a *= step(n2 * 0.25, d);
 	COLOR = vec4(col.rgb, a * col.a);

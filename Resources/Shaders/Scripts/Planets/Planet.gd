@@ -2,9 +2,9 @@ extends Control
 
 var time = 1000.0
 var override_time = false
-var original_colors = []
-@export  var relative_scale = 1.0
-@export var gui_zoom = 1.0
+var original_colors
+@export var relative_scale : float = 1.0
+@export var gui_zoom : float = 1.0
 
 func _ready():
 	original_colors = get_colors()
@@ -37,28 +37,13 @@ func get_dither():
 	pass
 
 func get_colors():
-	return []
-
-func set_colors(_colors):
 	pass
 
-func _get_colors_from_gradient(mat, grad_var):
-	return mat.get_shader_parameter(grad_var).gradient.colors
+func get_colors_from_shader(mat, uniform_name = "colors"):
+	return mat.get_shader_parameter(uniform_name)
 
-func _set_colors_from_gradient(mat, grad_var, new_gradient):
-	mat.get_shader_parameter(grad_var).gradient.colors = new_gradient
-
-func _get_colors_from_vars(mat, vars):
-	var colors = []
-	for v in vars:
-		colors.append(Color(mat.get_shader_parameter(v)))
-	return colors
-
-func _set_colors_from_vars(mat, vars, colors):
-	var index = 0
-	for v in vars:
-		mat.set_shader_parameter(v, colors[index])
-		index += 1
+func set_colors_on_shader(mat, colors, uniform_name = "colors"):
+	mat.set_shader_parameter(uniform_name, colors)
 
 func randomize_colors():
 	pass
@@ -84,3 +69,12 @@ func _generate_new_colorscheme(n_colors, hue_diff = 0.9, saturation = 0.5):
 		cols.append(Color(vec3.x, vec3.y, vec3.z))
 	
 	return cols
+
+func get_layers():
+	var layers = []
+	for c in get_children():
+		layers.append({"name": c.get_name(), "visible": c.visible})
+	return layers
+
+func toggle_layer(num):
+	get_children()[num].visible = !get_children()[num].visible

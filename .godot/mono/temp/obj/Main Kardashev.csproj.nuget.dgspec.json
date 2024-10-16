@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gwacie\\OneDrive\\Documents\\Godot\\Kardashev\\Main Kardashev.csproj": {}
+    "C:\\Users\\Trick\\source\\repos\\Kardashev\\Main Kardashev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gwacie\\OneDrive\\Documents\\Godot\\Kardashev\\Main Kardashev.csproj": {
+    "C:\\Users\\Trick\\source\\repos\\Kardashev\\Main Kardashev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gwacie\\OneDrive\\Documents\\Godot\\Kardashev\\Main Kardashev.csproj",
+        "projectUniqueName": "C:\\Users\\Trick\\source\\repos\\Kardashev\\Main Kardashev.csproj",
         "projectName": "Main Kardashev",
-        "projectPath": "C:\\Users\\Gwacie\\OneDrive\\Documents\\Godot\\Kardashev\\Main Kardashev.csproj",
-        "packagesPath": "C:\\Users\\Gwacie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gwacie\\OneDrive\\Documents\\Godot\\Kardashev\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\Trick\\source\\repos\\Kardashev\\Main Kardashev.csproj",
+        "packagesPath": "C:\\Users\\Trick\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Trick\\source\\repos\\Kardashev\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gwacie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -47,11 +52,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.2.1, )"
+              "version": "[4.3.0, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.2.1, )"
+              "version": "[4.3.0, )"
+            },
+            "GodotSharpEditor": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -67,16 +76,16 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.35, 6.0.35]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.35, 6.0.35]"
             },
             {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.35, 6.0.35]"
             }
           ],
           "frameworkReferences": {
@@ -84,12 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

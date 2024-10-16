@@ -1,66 +1,185 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708302386
-export_presets.cfg::TextFile::-1::1708300956::0::1::::<><>::
-icon.svg::CompressedTexture2D::3752191225691494354::1707873476::1708286312::1::::<><>::
-main.tscn::PackedScene::1110891349398652513::1708302010::0::1::::<><>::res://Main.cs<>res://Resources/Scripts/Main/BG/BG.cs<>res://Resources/Shaders/Scripts/Stars/Sol.cs<>res://Resources/Shaders/Scripts/Planets/Earth.cs<>res://Resources/Scripts/Player/Ship/Player.cs<>uid://b5fyippt1w8sx::::res://Resources/Art/Ships/Venture.png<>res://Resources/Scripts/Main/Camera/Camera2D.cs
-main.cs::CSharpScript::-1::1708302398::0::1::::<><>::
-::res://Export/::1708302134
-::res://Export/data_Main Kardashev_windows_x86_64/::1708302134
-Main Kardashev.deps.json::JSON::-1::1708301512::0::1::::<><>::
-Main Kardashev.runtimeconfig.json::JSON::-1::1708301512::0::1::::<><>::
-::res://Properties/::1708143053
-::res://Properties/PublishProfiles/::1708143063
-::res://Resources/::1708294010
-::res://Resources/Art/::1708286523
-::res://Resources/Art/BG/::1707894190
-BG.png::CompressedTexture2D::8773783046827872152::1707890109::1707894190::1::::<><>::
-::res://Resources/Art/Other/::1707894200
-Crosshair.png::CompressedTexture2D::7024102189362113183::1707885594::1707894200::1::::<><>::
-::res://Resources/Art/Ships/::1708286529
-Venture.png::CompressedTexture2D::4503880187703245423::1707874505::1708286529::1::::<><>::
-::res://Resources/Data/::1708295222
-stars.json::JSON::-1::1708273756::0::1::::<><>::
-StarTheme.json::JSON::-1::1708276463::0::1::::<><>::
-::res://Resources/Resource/::1708301642
-Colorscheme.tres::GradientTexture2D::3156457219725571749::1708301642::0::1::::<><>::
-::res://Resources/Scenes/::1708302000
-Planet.tscn::PackedScene::6272770467133028528::1708302000::0::1::::<><>::res://Resources/Shaders/Scripts/Planets/Planet.gd<>res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader<>res://Resources/Shaders/Scripts/Planets/Clouds.gdshader
-Star.tscn::PackedScene::5124704673865675111::1708302000::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/Star.gd<>res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader<>res://Resources/Shaders/Scripts/Stars/Star.gdshader<>uid://bk8anh74yng5j::::res://Resources/Resource/Colorscheme.tres<>res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader
-::res://Resources/Scenes/Background/::1708302000
-BackgroundGenerator.tscn::PackedScene::1975393533228681163::1708302000::0::1::::<><>::res://Resources/Scripts/Main/BackgroundGenerator.gd<>res://Resources/Shaders/Scripts/Stars/StarStuff.gdshader<>uid://bk8anh74yng5j::::res://Resources/Resource/Colorscheme.tres
-BigStar.gd::GDScript::-1::1708293644::0::1::::<>Sprite2D<>::
-BigStar.tscn::PackedScene::462046008024942409::1708302000::0::1::::<><>::res://Resources/Scenes/Background/BigStar.gd
-Planet.gd::GDScript::-1::1708293592::0::1::::<>Sprite2D<>::
-Planet.tscn::PackedScene::3514369722407231138::1708302000::0::1::::<><>::res://Resources/Scenes/Background/Planet.gd
-::res://Resources/Scripts/::1708286431
-::res://Resources/Scripts/Main/::1708300845
-BackgroundGenerator.gd::GDScript::-1::1708294875::0::1::::<>Control<>::
-::res://Resources/Scripts/Main/BG/::1708286362
-BG.cs::CSharpScript::-1::1708294848::0::1::::<>ParallaxLayer<>::
-::res://Resources/Scripts/Main/Camera/::1708286373
-Camera2D.cs::CSharpScript::-1::1708294860::0::1::::<>Camera2D<>::
-::res://Resources/Scripts/Player/::1708286515
-::res://Resources/Scripts/Player/Ship/::1708286528
-Player.cs::CSharpScript::-1::1708294864::0::1::::<>RigidBody2D<>::
-::res://Resources/Scripts/UI/::1708286408
-AnimatedSprite2D.cs::CSharpScript::-1::1707891361::0::1::::<>AnimatedSprite2D<>::
-Crosshair.cs::CSharpScript::-1::1707885879::0::1::::<>TextureRect<>::
-::res://Resources/Shaders/::1708293921
-::res://Resources/Shaders/Scripts/::1708286484
-::res://Resources/Shaders/Scripts/Objects/::1708286473
-::res://Resources/Shaders/Scripts/Planets/::1708302010
-Clouds.gdshader::Shader::-1::1708302010::0::1::::<><>::
-Earth.cs::CSharpScript::-1::1708294853::0::1::::<>Node2D<>::
-LandMasses.gd::GDScript::-1::1708293323::0::1::::<>Control<>::
-LandRivers.gdshader::Shader::-1::1708302010::0::1::::<><>::
-Planet.gd::GDScript::-1::1708286068::0::1::::<>Control<>::
-PlanetUnder.gdshader::Shader::-1::1708302010::0::1::::<><>::
-Rivers.gd::GDScript::-1::1708293333::0::1::::<>Control<>::
-::res://Resources/Shaders/Scripts/Stars/::1708302010
-Sol.cs::CSharpScript::-1::1708139419::0::1::::<>Node2D<>::
-Star.gd::GDScript::-1::1708294215::0::1::::<>Control<>::
-Star.gdshader::Shader::-1::1708302010::0::1::::<><>::
-StarBlobs.gdshader::Shader::-1::1708302010::0::1::::<><>::
-StarFlares.gdshader::Shader::-1::1708302010::0::1::::<><>::
-StarStuff.gdshader::Shader::-1::1708302010::0::1::::<><>::
-Sun.cs::CSharpScript::-1::1707877920::0::1::::<>Node2D<>::
+::res://::1729122856
+Background.cs::CSharpScript::-1::1728497122::0::1::::<>Node2D<>::
+cloud.gd::GDScript::-1::1728533408::0::1::::<>ColorRect<>::
+GasLayer.gdshader::Shader::-1::1729121906::0::1::::<><>::
+gasLayers.gd::GDScript::-1::1728537159::0::1::::<>Control<>::
+GasLayers.gdshader::Shader::-1::1729121906::0::1::::<><>::
+GasPlanet.cs::CSharpScript::-1::1728533081::0::1::::<>CenterContainer<>::
+GasPlanet.gd::GDScript::-1::1728537159::0::1::::<>Control<>::
+GasPlanet.gdshader::Shader::-1::1729121906::0::1::::<><>::
+GasPlanetLayer.gd::GDScript::-1::1728537159::0::1::::<>Control<>::
+GasPlanetLayers.gd::GDScript::-1::1728537666::0::1::::<>Control<>::
+GasPlanetRings.gd::GDScript::-1::1728537159::0::1::::<><>::
+gasPlanetShader.gdshader::Shader::-1::1729121906::0::1::::<><>::
+GasPlantRings.gdshader::Shader::-1::1729121906::0::1::::<><>::
+GastLayers.gd::GDScript::-1::1728537159::0::1::::<>Control<>::
+icon.svg::CompressedTexture2D::3752191225691494354::1727198489::1727198641::1::::<><>::
+main.tscn::PackedScene::1110891349398652513::1729111451::0::1::::<><>::uid://dt2x16dh7xb20::::res://Resources/Stars/Sol/solStarBlobsMat.tres<>uid://df7bwthg8nu3p::::res://Resources/Stars/Sol/solStarMat.tres<>res://Resources/Shaders/Scripts/Stars/Star.gdshader<>res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader<>uid://cb8ph3r3k6ara::::res://Resources/Stars/Sol/solStarFlaresMat.tres<>uid://bukxie1wyg2in::::res://Resources/Resource/Sun Rise.tres<>res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader<>uid://ct0fkm4ak742i::::res://Resources/Art/Other/station.png<>uid://1va3qfmoc8c::::res://Resources/Resource/Gerbier Light .tres<>res://Resources/Shaders/Scripts/Stars/Star.gd<>uid://bx3ys1ha7lopx::::res://Resources/Resource/Yellow Pastel to Red.tres<>uid://drtb61toducpa::::res://Resources/Stars/Proxima centauri/proxima_centauriStarBlobsMat.tres<>uid://1l3vmtlv5a0w::::res://Resources/Stars/Proxima centauri/proxima_centauriStarMat.tres<>uid://dwyte5uweand5::::res://Resources/Resource/White Alrt.tres<>uid://jokcxh3114vv::::res://Resources/Art/Other/gate.png<>uid://bl7a35bj8qmlk::::res://Resources/Stars/Proxima centauri/proxima_centauriStarFlaresMat.tres<>uid://dpkintnm1xj6v::::res://Resources/Resource/Blue Pastel.tres<>res://Resources/Scripts/Player/Ship/Player.cs<>uid://c4jd0wjvturaq::::res://Resources/Art/Ships/AsgardSciCruser.png<>res://Resources/Scripts/Main/Camera/Camera.cs<>res://Resources/Scripts/shader/BackgroundGenerator.gd<>uid://cpgdr1a5g5sqx::::res://Resources/Scenes/shaders/SolBG.tres<>uid://5tbr7jsj56hf::::res://Resources/Art/Starfield.png
+player.tscn::PackedScene::3799309541398070481::1729111452::0::1::::<><>::res://Resources/Scripts/Player/Ship/Player.cs<>uid://c4jd0wjvturaq::::res://Resources/Art/Ships/AsgardSciCruser.png<>res://Resources/Scripts/Main/Camera/Camera.cs
+Ring.gdshader::Shader::-1::1729121906::0::1::::<><>::
+::res://Export/::1727198489
+::res://Properties/::1727198489
+::res://Properties/PublishProfiles/::1727198489
+::res://Resources/::1728531118
+::res://Resources/Art/::1728525942
+Starfield.png::CompressedTexture2D::2144981257438781167::1728525939::1728525942::1::::<><>::
+::res://Resources/Art/BG/::1727198641
+BG.png::CompressedTexture2D::8773783046827872152::1727198489::1727198641::1::::<><>::
+::res://Resources/Art/Other/::1728606811
+Crosshair.png::CompressedTexture2D::7024102189362113183::1727198489::1727198641::1::::<><>::
+gate.png::CompressedTexture2D::661212842973279747::1728606808::1728606811::1::::<><>::
+station.png::CompressedTexture2D::6158360958357378418::1728599145::1728599147::1::::<><>::
+::res://Resources/Art/Ships/::1729111037
+AsgardSciCruser.png::CompressedTexture2D::6827125198898883972::1729111036::1729111037::1::::<><>::
+mining shyp.png::CompressedTexture2D::7905012255152832222::1728598779::1728598785::1::::<><>::
+SciCruser - Copy.png::CompressedTexture2D::5661430640503459214::1728598531::1728651593::1::::<><>::
+SciCruser.png::CompressedTexture2D::4192386410612065083::1728656087::1728656091::1::::<><>::
+Untitled-1.png::CompressedTexture2D::8905766383283023670::1728656073::1728656091::1::::<><>::
+Venture.png::CompressedTexture2D::4503880187703245423::1727198489::1727198641::1::::<><>::
+::res://Resources/Data/::1728484462
+actaulMap.json::JSON::-1::1727264710::0::1::::<><>::
+stars.json::JSON::-1::1727198489::0::1::::<><>::
+StarTheme.json::JSON::-1::1727198489::0::1::::<><>::
+::res://Resources/Resource/::1729111452
+Background.tres::GradientTexture2D::6078884746182717168::1729111452::0::1::::<><>::
+Blue Pastel.tres::GradientTexture2D::8233248453060277487::1729111452::0::1::::<><>::
+Deep Blu.tres::GradientTexture2D::6725270858703686405::1728589240::0::1::::<><>::
+Gerbier Light .tres::GradientTexture2D::54950374068091452::1729111452::0::1::::<><>::
+Sun Rise.tres::GradientTexture2D::3812252362469448441::1729111452::0::1::::<><>::
+White Alrt.tres::GradientTexture2D::8754124050853165112::1729111452::0::1::::<><>::
+Yellow Pastel to Red.tres::GradientTexture2D::4060057393062149349::1729111452::0::1::::<><>::
+::res://Resources/Resource/Colors/::1728581507
+::res://Resources/Scenes/::1728486520
+::res://Resources/Scenes/Background/::1728581403
+BackgroundGenerator.tscn::PackedScene::1975393533228681163::1728581403::0::1::::<><>::res://Resources/Scripts/shader/BackgroundGenerator.gd<>res://Resources/Stars/proxima centauri/proxima centauri.gdshader<>uid://bk8anh74yng5j::::res://Resources/Resource/Background.tres<>uid://djdx8tm3icssw::::res://Resources/Resource/1.tres
+BigStar.gd::GDScript::-1::1728537159::0::1::::<>Sprite2D<>::
+BigStar.tscn::PackedScene::462046008024942409::1727264604::0::1::::<><>::res://Resources/Scenes/Background/BigStar.gd
+Planet.gd::GDScript::-1::1728537159::0::1::::<>Sprite2D<>::
+Planet.tscn::PackedScene::3514369722407231138::1727264604::0::1::::<><>::res://Resources/Scenes/Background/Planet.gd
+::res://Resources/Scenes/shaders/::1729111453
+planetShader.tscn::PackedScene::6272770467133028528::1729111453::0::1::::<><>::res://Resources/Shaders/Scripts/Planets/Planet.gd<>res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader<>res://Resources/Shaders/Scripts/Planets/Clouds.gdshader
+proxima_centauriBG.tres::ShaderMaterial::4981613131376478913::1729111452::0::1::::<><>::res://Resources/Stars/proxima centauri/proxima centauri.gdshader
+SolBG.tres::ShaderMaterial::5838274164935114127::1729111452::0::1::::<><>::res://Resources/Stars/sol/Sol.gdshader<>uid://csuwlxif0vsge::::res://Resources/Resource/Background.tres
+starshader.tscn::PackedScene::5124704673865675111::1729111453::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/Star.gd<>uid://df7bwthg8nu3p::::res://Resources/Stars/Sol/solStarMat.tres<>res://Resources/Stars/proxima centauri/proxima_centauri_star.gdshader<>res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader
+::res://Resources/Scripts/::1728486558
+::res://Resources/Scripts/Main/::1728486561
+::res://Resources/Scripts/Main/BG/::1727198489
+BG.cs::CSharpScript::-1::1727198489::0::1::::<>ParallaxLayer<>::
+::res://Resources/Scripts/Main/Camera/::1727220310
+Camera.cs::CSharpScript::-1::1727220991::0::1::::<>Camera2D<>::
+::res://Resources/Scripts/Player/::1727198489
+::res://Resources/Scripts/Player/Ship/::1727198489
+Player.cs::CSharpScript::-1::1729110992::0::1::::<>RigidBody2D<>::
+::res://Resources/Scripts/shader/::1728537159
+BackgroundGenerator.gd::GDScript::-1::1728537159::0::1::::<>Control<>::
+::res://Resources/Scripts/UI/::1727198489
+AnimatedSprite2D.cs::CSharpScript::-1::1727198489::0::1::::<>AnimatedSprite2D<>::
+Crosshair.cs::CSharpScript::-1::1727198489::0::1::::<>TextureRect<>::
+::res://Resources/Scripts/zOLD/::1728486542
+Gates.cs::CSharpScript::-1::1727276857::0::1::::<>Node2D<>::
+main old.cs::CSharpScript::-1::1727274325::0::1::::<><>::
+Planets.cs::CSharpScript::-1::1727276238::0::1::::<>Node2D<>::
+SolSys.cs::CSharpScript::-1::1727279396::0::1::::<>Node2D<>::
+Sys.cs::CSharpScript::-1::1727278646::0::1::::<>Node2D<>::
+test.cs::CSharpScript::-1::1728484644::0::1::::<>Node2D<>::
+::res://Resources/Shaders/::1729121906
+starsShader.gdshader::Shader::-1::1729121906::0::1::::<><>::
+wormhole.gdshader::Shader::-1::1729121906::0::1::::<><>::
+::res://Resources/Shaders/Scripts/::1727198489
+::res://Resources/Shaders/Scripts/Planets/::1729121906
+Clouds.gdshader::Shader::-1::1729121906::0::1::::<><>::
+Earth.cs::CSharpScript::-1::1727198489::0::1::::<>Node2D<>::
+LandMasses.gd::GDScript::-1::1727198489::0::1::::<>Control<>::
+LandRivers.gdshader::Shader::-1::1729121906::0::1::::<><>::
+Planet.gd::GDScript::-1::1728537159::0::1::::<>Control<>::
+PlanetUnder.gdshader::Shader::-1::1729121906::0::1::::<><>::
+Rivers.gd::GDScript::-1::1727198489::0::1::::<>Control<>::
+::res://Resources/Shaders/Scripts/Stars/::1729121906
+Star.gd::GDScript::-1::1728538374::0::1::::<>Control<>::
+Star.gdshader::Shader::-1::1729121906::0::1::::<><>::
+StarBlobs.gdshader::Shader::-1::1729121906::0::1::::<><>::
+StarFlares.gdshader::Shader::-1::1729121906::0::1::::<><>::
+Sun.cs::CSharpScript::-1::1728490340::0::1::::<>Node2D<>::
+::res://Resources/Stars/::1728574715
+::res://Resources/Stars/18 Epsilon Eridani/::1728574693
+::res://Resources/Stars/52 Tau Ceti/::1728574693
+::res://Resources/Stars/61 Cygni A/::1728574693
+::res://Resources/Stars/61 Cygni B/::1728574693
+::res://Resources/Stars/Barnard's Star/::1728574693
+::res://Resources/Stars/BD-12°4523/::1728574693
+::res://Resources/Stars/DO Cephei/::1728574693
+::res://Resources/Stars/DX Cancri/::1728574693
+::res://Resources/Stars/Epsilon Indi/::1728574693
+::res://Resources/Stars/EZ Aquarii/::1728574693
+::res://Resources/Stars/FL Virginis A/::1728574693
+::res://Resources/Stars/FL Virginis B/::1728574693
+::res://Resources/Stars/GJ 1061/::1728574693
+::res://Resources/Stars/Gl 1/::1728574693
+::res://Resources/Stars/Gl 83.1/::1728574693
+::res://Resources/Stars/Gl 244 B/::1728574693
+::res://Resources/Stars/Gl 280 B/::1728574693
+::res://Resources/Stars/Gl 406/::1728574693
+::res://Resources/Stars/Gl 440/::1728574693
+::res://Resources/Stars/Gl 447/::1728574693
+::res://Resources/Stars/Gl 563.2/::1728574693
+::res://Resources/Stars/Gl 563.2B/::1728574693
+::res://Resources/Stars/Gl 674/::1728574693
+::res://Resources/Stars/Gl 687/::1728574693
+::res://Resources/Stars/Gl 725/::1728574693
+::res://Resources/Stars/Gl 725 B/::1728574693
+::res://Resources/Stars/Gl 729/::1728574693
+::res://Resources/Stars/Gl 905/::1728574693
+::res://Resources/Stars/GQ Andromedae/::1728574693
+::res://Resources/Stars/GX Andromedae/::1728574693
+::res://Resources/Stars/Hip 15689/::1728574693
+::res://Resources/Stars/Hip 114110/::1728574693
+::res://Resources/Stars/Innes' Star/::1728574693
+::res://Resources/Stars/Kapteyn's Star/::1728574693
+::res://Resources/Stars/Krüger 60/::1728574693
+::res://Resources/Stars/Lacaille 8760/::1728574693
+::res://Resources/Stars/Lacaille 9352/::1728574693
+::res://Resources/Stars/Lalande 21185/::1728574693
+::res://Resources/Stars/Luyten's Star/::1728574693
+::res://Resources/Stars/NN 3522/::1728574693
+::res://Resources/Stars/NN 3622/::1728574693
+::res://Resources/Stars/Procyon/::1728574693
+::res://Resources/Stars/Proxima centauri/::1729121906
+proxima centauri.gdshader::Shader::-1::1729121906::0::1::::<><>::
+proxima centauri.tscn::PackedScene::6568545038512514729::1728581403::0::1::::<><>::res://Resources/Stars/sol/Sol.cs<>res://Resources/Scripts/shader/BackgroundGenerator.gd<>uid://bk8anh74yng5j::::res://Resources/Resource/Background.tres<>uid://djdx8tm3icssw::::res://Resources/Resource/1.tres<>res://Resources/Stars/proxima centauri/proxima centauri.gdshader<>res://Resources/Shaders/Scripts/Stars/Star.gd<>res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader<>res://Resources/Shaders/Scripts/Stars/Star.gdshader<>res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader<>res://Resources/Shaders/Scripts/Planets/Planet.gd<>res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader<>res://Resources/Shaders/Scripts/Planets/Clouds.gdshader
+proxima_centauriParallax.tscn::PackedScene::3180775335547924094::1729111453::0::1::::<><>::res://Resources/Scripts/shader/BackgroundGenerator.gd<>uid://cc8eo8fqrgg2t::::res://Resources/Scenes/shaders/proxima_centauriBG.tres
+proxima_centauriStarBlobsMat.tres::ShaderMaterial::8391813042456089174::1729111452::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader
+proxima_centauriStarFlaresMat.tres::ShaderMaterial::3224609631769676960::1729111452::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader<>uid://bukxie1wyg2in::::res://Resources/Resource/Sun Rise.tres
+proxima_centauriStarMat.tres::ShaderMaterial::1849356327513481672::1729111452::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/Star.gdshader<>uid://bukxie1wyg2in::::res://Resources/Resource/Sun Rise.tres
+proxima_centauri_shader.tres::ShaderMaterial::5148424137780922251::1728581403::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/Star.gdshader<>uid://djdx8tm3icssw::::res://Resources/Resource/1.tres
+proxima_centauri_star.gdshader::Shader::-1::1729121906::0::1::::<><>::
+Rigel_Kentaurus_AStarFlaresMat.tres::ShaderMaterial::2922334800153295642::1728532361::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader
+Rigel_Kentaurus_AStarMat.tres::ShaderMaterial::2375808668323209376::1728532274::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/Star.gdshader
+::res://Resources/Stars/Rigel Kentaurus A/::1728532839
+Rigel_Kentaurus_AStarBlobsMat.tres::ShaderMaterial::3265001044285745135::1728532839::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader
+::res://Resources/Stars/Rigel Kentaurus B/::1728574693
+::res://Resources/Stars/Sirius/::1728574693
+::res://Resources/Stars/Sol/::1729121906
+planetShader.tres::ShaderMaterial::5897197395139380460::1728531108::0::1::::<><>::res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader
+Sol.cs::CSharpScript::-1::1728490855::0::1::::<>Node2D<>::
+Sol.gdshader::Shader::-1::1729121906::0::1::::<><>::
+sol.tscn::PackedScene::5838330518543646570::1728581307::0::1::::<><>::res://Resources/Stars/sol/Sol.cs<>uid://cfapewwp543rn::::res://Resources/Scenes/shaders/starshader.tscn<>res://Resources/Scripts/shader/BackgroundGenerator.gd<>uid://cvmtu31qj14gq::::res://Resources/Scenes/shaders/planetShader.tscn<>uid://bk8anh74yng5j::::res://Resources/Resource/Background.tres<>res://Resources/Stars/proxima centauri/proxima centauri.gdshader
+solShader.gdshader::Shader::-1::1729121906::0::1::::<><>::
+solShader.tres::ShaderMaterial::6411662237404349226::1728581307::0::1::::<><>::res://Resources/Stars/sol/SolStar.gdshader<>uid://bk8anh74yng5j::::res://Resources/Resource/Background.tres
+SolStar.gdshader::Shader::-1::1729121906::0::1::::<><>::
+solStarBlobsMat.tres::ShaderMaterial::8550032834256672907::1729111451::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader
+solStarFlaresMat.tres::ShaderMaterial::4912079430559291674::1729111452::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader<>uid://bx3ys1ha7lopx::::res://Resources/Resource/Yellow Pastel to Red.tres
+solStarMat.tres::ShaderMaterial::7576367370932582415::1729111452::0::1::::<><>::res://Resources/Shaders/Scripts/Stars/Star.gdshader<>uid://bx3ys1ha7lopx::::res://Resources/Resource/Yellow Pastel to Red.tres
+sol_parallax.tscn::PackedScene::2359087944853530619::1729111453::0::1::::<><>::res://Resources/Scripts/shader/BackgroundGenerator.gd<>uid://cpgdr1a5g5sqx::::res://Resources/Scenes/shaders/SolBG.tres
+starBG.gdshader::Shader::-1::1729121906::0::1::::<><>::
+Station.png::CompressedTexture2D::4639114303703239040::1728512375::1728574737::1::::<><>::
+::res://Resources/Stars/UV Ceti A/::1728574693
+::res://Resources/Stars/UV Ceti B/::1728574693
+::res://Resources/Stars/V577 Monocerotis A/::1728574693
+::res://Resources/Stars/V577 Monocerotis B/::1728574693
+::res://Resources/Stars/Van Maanen's Star/::1728574693
+::res://user/::1727697449
+actualMap - Copy.json::JSON::-1::1727289123::0::1::::<><>::
+actualMapItems.json::JSON::-1::1727290471::0::1::::<><>::
+actualMapList.json::JSON::-1::1727290075::0::1::::<><>::
+SaveGame1.json::JSON::-1::1727281427::0::1::::<><>::

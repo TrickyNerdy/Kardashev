@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvmtu31qj14gq"]
+
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Planets/Planet.gd" id="1_17fum"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader" id="2_qa5cv"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/Clouds.gdshader" id="3_m7fa3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mm30q"]
+shader = ExtResource("2_qa5cv")
+shader_parameter/pixels = 1000.0
+shader_parameter/rotation = 0.0
+shader_parameter/light_origin = Vector2(0.305, 0.58)
+shader_parameter/time_speed = 0.2
+shader_parameter/dither_size = 0.0
+shader_parameter/should_dither = false
+shader_parameter/light_border_1 = 0.856
+shader_parameter/light_border_2 = 1.0
+shader_parameter/river_cutoff = 0.162
+shader_parameter/col1 = Color(0.482353, 0.560784, 0.27451, 1)
+shader_parameter/col2 = Color(0.407843, 0.47451, 0.223529, 1)
+shader_parameter/col3 = Color(0.372549, 0.439216, 0.2, 1)
+shader_parameter/col4 = Color(0.376471, 0.439216, 0.203922, 1)
+shader_parameter/river_col = Color(0.376471, 0.439216, 1, 1)
+shader_parameter/river_col_dark = Color(0.615686, 0.686275, 1, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 4.464
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gwx1c"]
+shader = ExtResource("3_m7fa3")
+shader_parameter/pixels = 250.0
+shader_parameter/rotation = 0.0
+shader_parameter/cloud_cover = 0.363
+shader_parameter/light_origin = Vector2(0.14, 0.295)
+shader_parameter/time_speed = 0.2
+shader_parameter/stretch = 3.0
+shader_parameter/cloud_curve = 2.0
+shader_parameter/light_border_1 = 0.52
+shader_parameter/light_border_2 = 0.709
+shader_parameter/base_color = Color(0.76662, 0.76662, 0.76662, 1)
+shader_parameter/outline_color = Color(0.708019, 0.767877, 0.775983, 1)
+shader_parameter/shadow_base_color = Color(0.6, 0.647059, 0.643137, 1)
+shader_parameter/shadow_outline_color = Color(0.72549, 0.74902, 0.764706, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 6.548
+shader_parameter/time = 0.0
+
+[node name="CenterContainer" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+script = ExtResource("1_17fum")
+
+[node name="Land" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_mm30q")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cloud" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_gwx1c")
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://df7bwthg8nu3p"]
+
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/Star.gdshader" id="1_5105o"]
+[ext_resource type="Texture2D" uid="uid://bx3ys1ha7lopx" path="res://Resources/Resource/Yellow Pastel to Red.tres" id="2_ps8ql"]
+
+[resource]
+shader = ExtResource("1_5105o")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 1.0
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = 2.467
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = 4
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = ExtResource("2_ps8ql")

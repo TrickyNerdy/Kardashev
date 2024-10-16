@@ -5,7 +5,7 @@ using System;
 public partial class Player : RigidBody2D
 {
 	// Called when the node enters the scene tree for the first time.
-	float speed = .4f;
+	float speed = 0.44f;
 	Vector2 _movement = Vector2.Zero;
 	float vx;
 	float vy;

@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpgepk7ll6i3k"]
+
+[ext_resource type="Script" path="res://Resources/Stars/sol/Sol.cs" id="1_jgdbc"]
+[ext_resource type="PackedScene" uid="uid://cfapewwp543rn" path="res://Resources/Scenes/shaders/starshader.tscn" id="2_c2gq8"]
+[ext_resource type="Script" path="res://Resources/Scripts/shader/BackgroundGenerator.gd" id="2_eghwi"]
+[ext_resource type="PackedScene" uid="uid://cvmtu31qj14gq" path="res://Resources/Scenes/shaders/planetShader.tscn" id="3_0v38j"]
+[ext_resource type="Texture2D" uid="uid://bk8anh74yng5j" path="res://Resources/Resource/Background.tres" id="3_3kcsq"]
+[ext_resource type="Shader" path="res://Resources/Stars/proxima centauri/proxima centauri.gdshader" id="4_xex1u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_saqnq"]
+shader = ExtResource("4_xex1u")
+shader_parameter/size = 80.0
+shader_parameter/OCTAVES = 8
+shader_parameter/seed = 3.597
+shader_parameter/pixels = 2000.0
+shader_parameter/should_tile = true
+shader_parameter/reduce_background = false
+shader_parameter/uv_correct = Vector2(1, 1)
+shader_parameter/colorscheme = ExtResource("3_3kcsq")
+
+[node name="sol" type="Node2D"]
+script = ExtResource("1_jgdbc")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="BackgroundGenerator" type="Control" parent="ParallaxBackground/ParallaxLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_eghwi")
+colorscheme = ExtResource("3_3kcsq")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground/ParallaxLayer/BackgroundGenerator"]
+
+[node name="Background" type="ColorRect" parent="ParallaxBackground/ParallaxLayer/BackgroundGenerator/CanvasLayer"]
+visible = false
+color = Color(0, 0, 0, 1)
+
+[node name="StarStuff" type="ColorRect" parent="ParallaxBackground/ParallaxLayer/BackgroundGenerator"]
+material = SubResource("ShaderMaterial_saqnq")
+layout_mode = 0
+offset_right = 2560.0
+offset_bottom = 2560.0
+
+[node name="star" type="Node2D" parent="."]
+
+[node name="starShader" parent="star" instance=ExtResource("2_c2gq8")]
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="planets" type="Node2D" parent="star"]
+position = Vector2(100, 0)
+
+[node name="planetShader" parent="star/planets" instance=ExtResource("3_0v38j")]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="moons" type="Node2D" parent="star/planets"]
+
+[node name="stations" type="Node2D" parent="star/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="."]
+
+[node name="structures" type="Node2D" parent="."]
+
+[node name="gates" type="Node2D" parent="."]

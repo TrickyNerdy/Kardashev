@@ -1,0 +1,522 @@
+{
+  "0": {
+    "Display Name": "Sol",
+    "Gliese": "",
+    "Spectral Class": "G2V",
+    "Distance": 0,
+    "Xg": 0,
+    "Yg": 0,
+    "Zg": 0,
+    "AbsMag": 4.85
+  },
+  "1": {
+    "Display Name": "Proxima Centauri",
+    "Gliese": "Gl 551",
+    "Spectral Class": "M5Ve",
+    "Distance": 1.3,
+    "Xg": 0.9,
+    "Yg": -0.9,
+    "Zg": 0,
+    "AbsMag": 15.48901452
+  },
+  "2": {
+    "Display Name": "Rigel Kentaurus A",
+    "Gliese": "Gl 559",
+    "Spectral Class": "G2V",
+    "Distance": 1.3,
+    "Xg": 1,
+    "Yg": -0.9,
+    "Zg": 0,
+    "AbsMag": 4.36237068
+  },
+  "3": {
+    "Display Name": "Rigel Kentaurus B",
+    "Gliese": "Gl 559 B",
+    "Spectral Class": "K1V",
+    "Distance": 1.3,
+    "Xg": 1,
+    "Yg": -0.9,
+    "Zg": 0,
+    "AbsMag": 5.69237068
+  },
+  "4": {
+    "Display Name": "Barnard's Star",
+    "Gliese": "Gl 699",
+    "Spectral Class": "sdM4",
+    "Distance": 1.8,
+    "Xg": 1.5,
+    "Yg": 0.9,
+    "Zg": 0.4,
+    "AbsMag": 13.24790128
+  },
+  "5": {
+    "Display Name": "Gl 406",
+    "Gliese": "Gl 406",
+    "Spectral Class": "M6",
+    "Distance": 2.4,
+    "Xg": -0.6,
+    "Yg": -1.2,
+    "Zg": 2,
+    "AbsMag": 16.55743932
+  },
+  "6": {
+    "Display Name": "Lalande 21185",
+    "Gliese": "Gl 411",
+    "Spectral Class": "M2V",
+    "Distance": 2.5,
+    "Xg": -1.1,
+    "Yg": -0.1,
+    "Zg": 2.3,
+    "AbsMag": 10.44864499
+  },
+  "7": {
+    "Display Name": "Sirius",
+    "Gliese": "Gl 244",
+    "Spectral Class": "A0m...",
+    "Distance": 2.6,
+    "Xg": -1.8,
+    "Yg": -1.9,
+    "Zg": -0.4,
+    "AbsMag": 1.464398907
+  },
+  "8": {
+    "Display Name": "Gl 244 B",
+    "Gliese": "Gl 244 B",
+    "Spectral Class": "DA2",
+    "Distance": 2.6,
+    "Xg": -1.8,
+    "Yg": -1.9,
+    "Zg": -0.4,
+    "AbsMag": 11.33439891
+  },
+  "9": {
+    "Display Name": "UV Ceti A",
+    "Gliese": "Gl 65 A",
+    "Spectral Class": "dM5.5e",
+    "Distance": 2.6,
+    "Xg": -0.6,
+    "Yg": 0.1,
+    "Zg": -2.5,
+    "AbsMag": 15.47291438
+  },
+  "10": {
+    "Display Name": "UV Ceti B",
+    "Gliese": "Gl 65 B",
+    "Spectral Class": "dM5.5e",
+    "Distance": 2.6,
+    "Xg": -0.6,
+    "Yg": 0.1,
+    "Zg": -2.5,
+    "AbsMag": 15.60291438
+  },
+  "11": {
+    "Display Name": "Gl 729",
+    "Gliese": "Gl 729",
+    "Spectral Class": "M3.5Ve",
+    "Distance": 3,
+    "Xg": 2.9,
+    "Yg": 0.6,
+    "Zg": -0.5,
+    "AbsMag": 13.09479628
+  },
+  "12": {
+    "Display Name": "18 Epsilon Eridani",
+    "Gliese": "Gl 144",
+    "Spectral Class": "K2V",
+    "Distance": 3.2,
+    "Xg": -2.1,
+    "Yg": -0.6,
+    "Zg": -2.4,
+    "AbsMag": 6.192055687
+  },
+  "13": {
+    "Display Name": "Gl 905",
+    "Gliese": "Gl 905",
+    "Spectral Class": "dM6 e",
+    "Distance": 3.2,
+    "Xg": -1,
+    "Yg": 2.8,
+    "Zg": -0.9,
+    "AbsMag": 14.78568497
+  },
+  "14": {
+    "Display Name": "Gl 447",
+    "Gliese": "Gl 447",
+    "Spectral Class": "M4.5V",
+    "Distance": 3.3,
+    "Xg": 0,
+    "Yg": -1.7,
+    "Zg": 2.9,
+    "AbsMag": 13.50256408
+  },
+  "15": {
+    "Display Name": "Lacaille 9352",
+    "Gliese": "Gl 887",
+    "Spectral Class": "M2/M3V",
+    "Distance": 3.3,
+    "Xg": 1.3,
+    "Yg": 0.1,
+    "Zg": -3,
+    "AbsMag": 9.7536535
+  },
+  "16": {
+    "Display Name": "EZ Aquarii",
+    "Gliese": "Gl 866",
+    "Spectral Class": "M5 e",
+    "Distance": 3.4,
+    "Xg": 1.3,
+    "Yg": 1.4,
+    "Zg": -2.8,
+    "AbsMag": 15.00395131
+  },
+  "17": {
+    "Display Name": "Procyon",
+    "Gliese": "Gl 280",
+    "Spectral Class": "F5IV-V",
+    "Distance": 3.5,
+    "Xg": -2.8,
+    "Yg": -1.9,
+    "Zg": 0.8,
+    "AbsMag": 2.661298621
+  },
+  "18": {
+    "Display Name": "Gl 280 B",
+    "Gliese": "Gl 280 B",
+    "Spectral Class": "DA",
+    "Distance": 3.5,
+    "Xg": -2.8,
+    "Yg": -1.9,
+    "Zg": 0.8,
+    "AbsMag": 12.98129862
+  },
+  "19": {
+    "Display Name": "Gl 725 B",
+    "Gliese": "Gl 725 B",
+    "Spectral Class": "K5",
+    "Distance": 3.5,
+    "Xg": 0,
+    "Yg": 3.2,
+    "Zg": 1.4,
+    "AbsMag": 11.9802587
+  },
+  "20": {
+    "Display Name": "61 Cygni A",
+    "Gliese": "Gl 820",
+    "Spectral Class": "K5V",
+    "Distance": 3.5,
+    "Xg": 0.5,
+    "Yg": 3.4,
+    "Zg": -0.4,
+    "AbsMag": 7.500392855
+  },
+  "21": {
+    "Display Name": "61 Cygni B",
+    "Gliese": "Gl 820 B",
+    "Spectral Class": "K7V",
+    "Distance": 3.5,
+    "Xg": 0.5,
+    "Yg": 3.5,
+    "Zg": -0.4,
+    "AbsMag": 8.307422009
+  },
+  "22": {
+    "Display Name": "DX Cancri",
+    "Gliese": "GJ 1111",
+    "Spectral Class": "M6.5",
+    "Distance": 3.6,
+    "Xg": -2.9,
+    "Yg": -0.9,
+    "Zg": 1.9,
+    "AbsMag": 17.01297131
+  },
+  "23": {
+    "Display Name": "GX Andromedae",
+    "Gliese": "Gl 15 A",
+    "Spectral Class": "M1V",
+    "Distance": 3.6,
+    "Xg": -1.5,
+    "Yg": 3,
+    "Zg": -1.1,
+    "AbsMag": 10.31788307
+  },
+  "24": {
+    "Display Name": "GQ Andromedae",
+    "Gliese": "Gl 15 B",
+    "Spectral Class": "M6 Ve",
+    "Distance": 3.6,
+    "Xg": -1.5,
+    "Yg": 3,
+    "Zg": -1.1,
+    "AbsMag": 13.29788307
+  },
+  "25": {
+    "Display Name": "52 Tau Ceti",
+    "Gliese": "Gl 71",
+    "Spectral Class": "G8V",
+    "Distance": 3.6,
+    "Xg": -1,
+    "Yg": 0.1,
+    "Zg": -3.5,
+    "AbsMag": 5.68009966
+  },
+  "26": {
+    "Display Name": "Gl 725",
+    "Gliese": "Gl 725",
+    "Spectral Class": "K5",
+    "Distance": 3.6,
+    "Xg": 0,
+    "Yg": 3.3,
+    "Zg": 1.5,
+    "AbsMag": 11.13796054
+  },
+  "27": {
+    "Display Name": "Epsilon Indi",
+    "Gliese": "Gl 845",
+    "Spectral Class": "K5V",
+    "Distance": 3.6,
+    "Xg": 2.2,
+    "Yg": -1,
+    "Zg": -2.7,
+    "AbsMag": 6.892656352
+  },
+  "28": {
+    "Display Name": "Luyten's Star",
+    "Gliese": "Gl 273",
+    "Spectral Class": "M5",
+    "Distance": 3.8,
+    "Xg": -3.2,
+    "Yg": -2,
+    "Zg": 0.7,
+    "AbsMag": 11.95192438
+  },
+  "29": {
+    "Display Name": "Kapteyn's Star",
+    "Gliese": "Gl 191",
+    "Spectral Class": "M0V",
+    "Distance": 3.9,
+    "Xg": -1.1,
+    "Yg": -3,
+    "Zg": -2.3,
+    "AbsMag": 10.88491382
+  },
+  "30": {
+    "Display Name": "Lacaille 8760",
+    "Gliese": "Gl 825",
+    "Spectral Class": "M1/M2V",
+    "Distance": 3.9,
+    "Xg": 2.8,
+    "Yg": 0.2,
+    "Zg": -2.8,
+    "AbsMag": 8.688775957
+  },
+  "31": {
+    "Display Name": "Krüger 60",
+    "Gliese": "Gl 860",
+    "Spectral Class": "M2V",
+    "Distance": 4,
+    "Xg": -1,
+    "Yg": 3.9,
+    "Zg": 0,
+    "AbsMag": 11.83552681
+  },
+  "32": {
+    "Display Name": "DO Cephei",
+    "Gliese": "Gl 860 B",
+    "Spectral Class": "M6 V",
+    "Distance": 4,
+    "Xg": -1,
+    "Yg": 3.9,
+    "Zg": 0,
+    "AbsMag": 13.28552681
+  },
+  "33": {
+    "Display Name": "V577 Monocerotis A",
+    "Gliese": "Gl 234 A",
+    "Spectral Class": "M4.5Ve",
+    "Distance": 4.1,
+    "Xg": -3.4,
+    "Yg": -2.2,
+    "Zg": -0.4,
+    "AbsMag": 13.05704817
+  },
+  "34": {
+    "Display Name": "V577 Monocerotis B",
+    "Gliese": "Gl 234 B",
+    "Spectral Class": "",
+    "Distance": 4.1,
+    "Xg": -3.4,
+    "Yg": -2.2,
+    "Zg": -0.4,
+    "AbsMag": 16.52704817
+  },
+  "35": {
+    "Display Name": "GJ 1061",
+    "Gliese": "GJ 1061",
+    "Spectral Class": "M4.5",
+    "Distance": 4.3,
+    "Xg": -0.8,
+    "Yg": -2.5,
+    "Zg": -3.4,
+    "AbsMag": 14.86677961
+  },
+  "36": {
+    "Display Name": "FL Virginis A",
+    "Gliese": "Gl 473",
+    "Spectral Class": "dM5.5eJ",
+    "Distance": 4.3,
+    "Xg": 0.4,
+    "Yg": -1.3,
+    "Zg": 4.1,
+    "AbsMag": 14.86931108
+  },
+  "37": {
+    "Display Name": "FL Virginis B",
+    "Gliese": "Gl 473 B",
+    "Spectral Class": "M7",
+    "Distance": 4.3,
+    "Xg": 0.4,
+    "Yg": -1.3,
+    "Zg": 4.1,
+    "AbsMag": 15.12931108
+  },
+  "38": {
+    "Display Name": "Gl 563.2B",
+    "Gliese": "Gl 563.2B",
+    "Spectral Class": "M",
+    "Distance": 4.3,
+    "Xg": 3.3,
+    "Yg": -1.6,
+    "Zg": 2.1,
+    "AbsMag": 13.91755585
+  },
+  "39": {
+    "Display Name": "BD-12°4523",
+    "Gliese": "Gl 628",
+    "Spectral Class": "M4",
+    "Distance": 4.3,
+    "Xg": 3.9,
+    "Yg": 0.2,
+    "Zg": 1.7,
+    "AbsMag": 11.93080683
+  },
+  "40": {
+    "Display Name": "Gl 1",
+    "Gliese": "Gl 1",
+    "Spectral Class": "M2V",
+    "Distance": 4.4,
+    "Xg": 1,
+    "Yg": -0.3,
+    "Zg": -4.2,
+    "AbsMag": 10.34230436
+  },
+  "41": {
+    "Display Name": "Van Maanen's Star",
+    "Gliese": "Gl 35",
+    "Spectral Class": "DG",
+    "Distance": 4.4,
+    "Xg": -1.3,
+    "Yg": 2,
+    "Zg": -3.7,
+    "AbsMag": 14.15965094
+  },
+  "42": {
+    "Display Name": "Hip 15689",
+    "Gliese": "",
+    "Spectral Class": "",
+    "Distance": 4.4,
+    "Xg": -2.5,
+    "Yg": -0.9,
+    "Zg": -3.5,
+    "AbsMag": 13.94442971
+  },
+  "43": {
+    "Display Name": "Gl 563.2",
+    "Gliese": "Gl 563.2",
+    "Spectral Class": "M",
+    "Distance": 4.5,
+    "Xg": 3.5,
+    "Yg": -1.7,
+    "Zg": 2.2,
+    "AbsMag": 13.38980771
+  },
+  "44": {
+    "Display Name": "Gl 674",
+    "Gliese": "Gl 674",
+    "Spectral Class": "K5",
+    "Distance": 4.5,
+    "Xg": 4.3,
+    "Yg": -1.3,
+    "Zg": -0.5,
+    "AbsMag": 11.0863535
+  },
+  "45": {
+    "Display Name": "Gl 687",
+    "Gliese": "Gl 687",
+    "Spectral Class": "M3.5Vvar",
+    "Distance": 4.5,
+    "Xg": -0.6,
+    "Yg": 3.8,
+    "Zg": 2.4,
+    "AbsMag": 10.90048702
+  },
+  "46": {
+    "Display Name": "Gl 83.1",
+    "Gliese": "Gl 83.1",
+    "Spectral Class": "dM8 e",
+    "Distance": 4.5,
+    "Xg": -2.6,
+    "Yg": 1.6,
+    "Zg": -3.2,
+    "AbsMag": 14.02930041
+  },
+  "47": {
+    "Display Name": "NN 3522",
+    "Gliese": "NN 3522",
+    "Spectral Class": "k",
+    "Distance": 4.5,
+    "Xg": -2.9,
+    "Yg": -2.4,
+    "Zg": 2.4,
+    "AbsMag": 12.64124009
+  },
+  "48": {
+    "Display Name": "Innes' Star",
+    "Gliese": "NN 3618",
+    "Spectral Class": "m",
+    "Distance": 4.5,
+    "Xg": 1.4,
+    "Yg": -4.3,
+    "Zg": -0.2,
+    "AbsMag": 15.65957593
+  },
+  "49": {
+    "Display Name": "NN 3622",
+    "Gliese": "NN 3622",
+    "Spectral Class": "M6.5",
+    "Distance": 4.5,
+    "Xg": -0.5,
+    "Yg": -3.4,
+    "Zg": 3,
+    "AbsMag": 17.32196137
+  },
+  "50": {
+    "Display Name": "Gl 440",
+    "Gliese": "Gl 440",
+    "Spectral Class": "DC:",
+    "Distance": 4.6,
+    "Xg": 2,
+    "Yg": -4.1,
+    "Zg": -0.2,
+    "AbsMag": 13.17628628
+  },
+  "51": {
+    "Display Name": "Hip 114110",
+    "Gliese": "",
+    "Spectral Class": "",
+    "Distance": 4.6,
+    "Xg": 1.2,
+    "Yg": 1.7,
+    "Zg": -4.1,
+    "AbsMag": 13.91749009
+  }
+}

@@ -1,0 +1,248 @@
+[gd_scene load_steps=19 format=3 uid="uid://c0t38hsin7avp"]
+
+[ext_resource type="Script" path="res://Resources/Stars/sol/Sol.cs" id="1_ti14n"]
+[ext_resource type="Script" path="res://Resources/Scripts/shader/BackgroundGenerator.gd" id="2_2c3pg"]
+[ext_resource type="Texture2D" uid="uid://bk8anh74yng5j" path="res://Resources/Resource/Background.tres" id="3_h7hy8"]
+[ext_resource type="Texture2D" uid="uid://djdx8tm3icssw" path="res://Resources/Resource/1.tres" id="3_tyia7"]
+[ext_resource type="Shader" path="res://Resources/Stars/proxima centauri/proxima centauri.gdshader" id="4_wdry4"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Stars/Star.gd" id="5_udnad"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader" id="6_2t64a"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/Star.gdshader" id="7_gwaf8"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader" id="9_n24hk"]
+[ext_resource type="Script" path="res://Resources/Shaders/Scripts/Planets/Planet.gd" id="10_t3q8i"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/LandRivers.gdshader" id="11_2f2fh"]
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Planets/Clouds.gdshader" id="12_fh5qi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_saqnq"]
+shader = ExtResource("4_wdry4")
+shader_parameter/size = 80.0
+shader_parameter/OCTAVES = 8
+shader_parameter/seed = 3.597
+shader_parameter/pixels = 2000.0
+shader_parameter/should_tile = true
+shader_parameter/reduce_background = false
+shader_parameter/uv_correct = Vector2(1, 1)
+shader_parameter/colorscheme = ExtResource("3_tyia7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxocr"]
+shader = ExtResource("6_2t64a")
+shader_parameter/pixels = 1000.0
+shader_parameter/color = Color(0.227451, 0.156863, 0.00784314, 1)
+shader_parameter/time_speed = 1.0
+shader_parameter/time = 0.185
+shader_parameter/rotation = 0.515
+shader_parameter/seed = 2.467
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = 4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o0bv6"]
+shader = ExtResource("7_gwaf8")
+shader_parameter/pixels = 400.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 3.51
+shader_parameter/rotation = 0.0
+shader_parameter/should_dither = false
+shader_parameter/seed = null
+shader_parameter/size = 4.0
+shader_parameter/OCTAVES = 4
+shader_parameter/TILES = 1.0
+shader_parameter/colorramp = ExtResource("3_h7hy8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1nn2"]
+shader = ExtResource("9_n24hk")
+shader_parameter/pixels = 250.0
+shader_parameter/time_speed = 0.43
+shader_parameter/time = 0.0
+shader_parameter/rotation = 1.821
+shader_parameter/should_dither = false
+shader_parameter/storm_width = 0.1
+shader_parameter/storm_dither_width = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/seed = 5.312
+shader_parameter/circle_amount = 2.01
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 2.0
+shader_parameter/OCTAVES = 1
+shader_parameter/colorramp = ExtResource("3_h7hy8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mm30q"]
+shader = ExtResource("11_2f2fh")
+shader_parameter/pixels = 250.0
+shader_parameter/rotation = 0.0
+shader_parameter/light_origin = Vector2(0.305, 0.58)
+shader_parameter/time_speed = 1.0
+shader_parameter/dither_size = 0.0
+shader_parameter/should_dither = false
+shader_parameter/light_border_1 = 0.856
+shader_parameter/light_border_2 = 1.0
+shader_parameter/river_cutoff = 0.162
+shader_parameter/col1 = Color(0.482353, 0.560784, 0.27451, 1)
+shader_parameter/col2 = Color(0.407843, 0.47451, 0.223529, 1)
+shader_parameter/col3 = Color(0.372549, 0.439216, 0.2, 1)
+shader_parameter/col4 = Color(0.376471, 0.439216, 0.203922, 1)
+shader_parameter/river_col = Color(0.376471, 0.439216, 1, 1)
+shader_parameter/river_col_dark = Color(0.615686, 0.686275, 1, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 4.464
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gwx1c"]
+shader = ExtResource("12_fh5qi")
+shader_parameter/pixels = 250.0
+shader_parameter/rotation = 0.0
+shader_parameter/cloud_cover = 0.363
+shader_parameter/light_origin = Vector2(0.14, 0.295)
+shader_parameter/time_speed = 0.2
+shader_parameter/stretch = 3.0
+shader_parameter/cloud_curve = 2.0
+shader_parameter/light_border_1 = 0.52
+shader_parameter/light_border_2 = 0.709
+shader_parameter/base_color = Color(0.76662, 0.76662, 0.76662, 1)
+shader_parameter/outline_color = Color(0.708019, 0.767877, 0.775983, 1)
+shader_parameter/shadow_base_color = Color(0.6, 0.647059, 0.643137, 1)
+shader_parameter/shadow_outline_color = Color(0.72549, 0.74902, 0.764706, 1)
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1
+shader_parameter/seed = 6.548
+shader_parameter/time = 0.0
+
+[node name="sol" type="Node2D"]
+script = ExtResource("1_ti14n")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="BackgroundGenerator" type="Control" parent="ParallaxBackground/ParallaxLayer"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_2c3pg")
+colorscheme = ExtResource("3_tyia7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground/ParallaxLayer/BackgroundGenerator"]
+
+[node name="Background" type="ColorRect" parent="ParallaxBackground/ParallaxLayer/BackgroundGenerator/CanvasLayer"]
+visible = false
+color = Color(0, 0, 0, 1)
+
+[node name="StarStuff" type="ColorRect" parent="ParallaxBackground/ParallaxLayer/BackgroundGenerator"]
+material = SubResource("ShaderMaterial_saqnq")
+layout_mode = 0
+offset_right = 2560.0
+offset_bottom = 2560.0
+
+[node name="star" type="Node2D" parent="."]
+
+[node name="starShader" type="CenterContainer" parent="star"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="star" type="Control" parent="star/starShader"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+script = ExtResource("5_udnad")
+
+[node name="StarBackground" type="ColorRect" parent="star/starShader/star"]
+material = SubResource("ShaderMaterial_fxocr")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star" type="ColorRect" parent="star/starShader/star"]
+material = SubResource("ShaderMaterial_o0bv6")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarFlares" type="ColorRect" parent="star/starShader/star"]
+material = SubResource("ShaderMaterial_q1nn2")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -19.95
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="planets" type="Node2D" parent="star"]
+position = Vector2(100, 0)
+
+[node name="planetShader" type="CenterContainer" parent="star/planets"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="star/planets/planetShader"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+script = ExtResource("10_t3q8i")
+
+[node name="Land" type="ColorRect" parent="star/planets/planetShader/Control"]
+material = SubResource("ShaderMaterial_mm30q")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cloud" type="ColorRect" parent="star/planets/planetShader/Control"]
+material = SubResource("ShaderMaterial_gwx1c")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="moons" type="Node2D" parent="star/planets"]
+
+[node name="stations" type="Node2D" parent="star/planets/moons"]
+
+[node name="astroids" type="Node2D" parent="."]
+
+[node name="structures" type="Node2D" parent="."]
+
+[node name="gates" type="Node2D" parent="."]

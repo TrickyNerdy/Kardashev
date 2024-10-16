@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dt2x16dh7xb20"]
+
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarBlobs.gdshader" id="1_wo75v"]
+
+[resource]
+shader = ExtResource("1_wo75v")
+shader_parameter/pixels = 1000.0
+shader_parameter/color = Color(0.976471, 0.839216, 0.741176, 1)
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.0
+shader_parameter/rotation = 0.0
+shader_parameter/seed = 3.124
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_size = 1.0
+shader_parameter/size = 10.0
+shader_parameter/OCTAVES = 1

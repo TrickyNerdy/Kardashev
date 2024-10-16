@@ -1,28 +1,25 @@
 extends "res://Resources/Shaders/Scripts/Planets/Planet.gd"
 
 func set_pixels(amount):
-	$StarBackground.material.set_shader_parameter("pixels", amount*relative_scale)
+	$Blobs.material.set_shader_parameter("pixels", amount*relative_scale)
 	$Star.material.set_shader_parameter("pixels", amount)
 	$StarFlares.material.set_shader_parameter("pixels", amount*relative_scale)
 
 	$Star.size = Vector2(amount, amount)
 	$StarFlares.size = Vector2(amount, amount)*relative_scale
-	$StarBackground.size = Vector2(amount, amount)*relative_scale
+	$Blobs.size = Vector2(amount, amount)*relative_scale
 
 	$StarFlares.position = Vector2(-amount, -amount) * 0.5
-	$StarBackground.position = Vector2(-amount, -amount) * 0.5
+	$Blobs.position = Vector2(-amount, -amount) * 0.5
 
 func set_light(_pos):
 	pass
 
 func set_seed(sd):
 	var converted_seed = sd%1000/100.0
-	$StarBackground.material.set_shader_parameter("seed", converted_seed)
+	$Blobs.material.set_shader_parameter("seed", converted_seed)
 	$Star.material.set_shader_parameter("seed", converted_seed)
 	$StarFlares.material.set_shader_parameter("seed", converted_seed)
-
-#	removed now with color setting functionality
-#	_set_colors(sd)
 
 var starcolor1 = Gradient.new()
 var starcolor2 = Gradient.new()
@@ -50,17 +47,17 @@ func _set_colors(sd): # this is just a little extra function to show some differ
 		$StarFlares.material.get_shader_parameter("colorramp").gradient = starflarecolor2
 
 func set_rotates(r):
-	$StarBackground.material.set_shader_parameter("rotation", r)
+	$Blobs.material.set_shader_parameter("rotation", r)
 	$Star.material.set_shader_parameter("rotation", r)
 	$StarFlares.material.set_shader_parameter("rotation", r)
 
 func update_time(t):
-	$StarBackground.material.set_shader_parameter("time", t * get_multiplier($StarBackground.material) * 0.01)
+	$Blobs.material.set_shader_parameter("time", t * get_multiplier($Blobs.material) * 0.01)
 	$Star.material.set_shader_parameter("time", t * get_multiplier($Star.material) * 0.005)
 	$StarFlares.material.set_shader_parameter("time", t * get_multiplier($StarFlares.material) * 0.015)
 
 func set_custom_time(t):
-	$StarBackground.material.set_shader_parameter("time", t * get_multiplier($StarBackground.material))
+	$Blobs.material.set_shader_parameter("time", t * get_multiplier($Blobs.material))
 	$Star.material.set_shader_parameter("time", t * (1.0 / $Star.material.get_shader_parameter("time_speed")))
 	$StarFlares.material.set_shader_parameter("time", t * get_multiplier($StarFlares.material))
 
@@ -70,20 +67,15 @@ func set_dither(d):
 
 func get_dither():
 	return $Star.material.get_shader_parameter("should_dither")
-	
+
 func get_colors():
-	return (PackedColorArray(_get_colors_from_vars($StarBackground.material, ["color"]))
-	+ _get_colors_from_gradient($Star.material, "colorramp")
-	+ _get_colors_from_gradient($StarFlares.material, "colorramp"))
+	return get_colors_from_shader($Blobs.material) + get_colors_from_shader($Star.material) + get_colors_from_shader($StarFlares.material)
 
 func set_colors(colors):
-	# poolcolorarray doesnt have slice function, convert to generic array first then back to poolcolorarray
-	var cols1 = PackedColorArray(Array(colors).slice(1, 4, 1))
-	var cols2 = PackedColorArray(Array(colors).slice(5, 6, 1))
-	
-	$StarBackground.material.set_shader_parameter("color", colors[0])
-	_set_colors_from_gradient($Star.material, "colorramp", cols1)
-	_set_colors_from_gradient($StarFlares.material, "colorramp", cols2)
+	set_colors_on_shader($Blobs.material, colors.slice(0, 1))
+	set_colors_on_shader($Star.material, colors.slice(1, 6))
+	set_colors_on_shader($StarFlares.material, colors.slice(6, 10))
+
 
 func randomize_colors():
 	var seed_colors = _generate_new_colorscheme(4, randf_range(0.2, 0.4), 2.0)

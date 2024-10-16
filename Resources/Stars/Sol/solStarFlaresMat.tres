@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cb8ph3r3k6ara"]
+
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader" id="1_788uy"]
+[ext_resource type="Texture2D" uid="uid://bx3ys1ha7lopx" path="res://Resources/Resource/Yellow Pastel to Red.tres" id="2_aidvs"]
+
+[resource]
+shader = ExtResource("1_788uy")
+shader_parameter/pixels = 250.0
+shader_parameter/time_speed = 0.2
+shader_parameter/time = 0.0
+shader_parameter/rotation = 1.0
+shader_parameter/should_dither = false
+shader_parameter/storm_width = 0.1
+shader_parameter/storm_dither_width = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/seed = 5.312
+shader_parameter/circle_amount = 2.0
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 2.0
+shader_parameter/OCTAVES = 1
+shader_parameter/colorramp = ExtResource("2_aidvs")

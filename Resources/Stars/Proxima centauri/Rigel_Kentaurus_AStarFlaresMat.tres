@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bhvuor3w3gfkc"]
+
+[ext_resource type="Shader" path="res://Resources/Shaders/Scripts/Stars/StarFlares.gdshader" id="1_xldpk"]
+
+[sub_resource type="Gradient" id="Gradient_yde3e"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.771824, 0.422006, 0.784393, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3e1sy"]
+gradient = SubResource("Gradient_yde3e")
+
+[resource]
+shader = ExtResource("1_xldpk")
+shader_parameter/pixels = 1000.0
+shader_parameter/time_speed = 0.05
+shader_parameter/time = 0.0
+shader_parameter/rotation = 1.821
+shader_parameter/should_dither = false
+shader_parameter/storm_width = 0.1
+shader_parameter/storm_dither_width = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/seed = 5.312
+shader_parameter/circle_amount = 2.01
+shader_parameter/circle_scale = 1.0
+shader_parameter/size = 2.0
+shader_parameter/OCTAVES = 1
+shader_parameter/colorramp = SubResource("GradientTexture1D_3e1sy")
